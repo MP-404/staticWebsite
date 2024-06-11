@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="assets2/Counter/odometer2.css">
+        <script type="text/javascript" src="js/pace.min.js"></script>
+        <link href="css/pace-loading-bar.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/animate.caliber.css">
+        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/jquery.viewportchecker.min.js"></script>
+        <!--Mixitup -->
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <!--Fancybox -->
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+        <!-- Main Style -->
+        <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="icon" href="./img/Mi - Logo.svg">
+        <script type="text/javascript" src="js/main.js"></script>
+        <style>
+          .swiper-container {
+                width: 100%;
+                height: 100%;
+            }
+        
+            .swiper-slide {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .card {
+                margin-left: 2%;
+                width: 100%;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            
+            .card img {
+                width: 90%;
+                height: 90%;
+                margin-bottom: 20px;
+            }
+            
+            .card h3 {
+                margin-bottom: 10px;
+            }
+            
+            .card p {
+                color: #666;
+            }  
+        </style>
+    </head>
+    <body class=" horizontal  yellow">
+        <!-- Section Start - Header -->
+        <section class="header bg-lightgray header-1" >
+            <!-- Menu Top Bar - Start -->
+            <div class="topbar" data-effect="fadeIn">
+                <div class="menu">
+                    <div class="primary inviewport animated delay4" data-effect="fadeInRightBig">
+                        <div class='cssmenu'>
+                            <!-- Menu - Start -->
+                            <ul class='menu-ul'><li class='has-sub'>
+                                <a href='index.html'>Home</a>
+                            <li class='has-sub'>
+                                <a href='about-us.html'>About Us</a>
+                            </li>
+                            <li class='has-sub'>
+                                <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                                <ul>
+                                    <li>
+                                        <a href='audiovideo.html'>Audio & Video Content</a>
+                                    </li>
+                                    <li>
+                                        <a href='static.html'>Static Content</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <!-- Menu - End -->
+                    </div>
+                </div>
+                <div class="black inviewport animated delay4" data-effect="fadeInLeftBig">
+                    <div class='cssmenu'>
+                        <!-- Menu - Start -->
+                        <ul class='menu-ul'>
+                        <li class='has-sub'>
+                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Content Production'>Content Production</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Digital Innovations'>Digital Innovations</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Media Design'>Media Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='blogs.html'>Blogs</a>
+                                </li>
+                                <li>
+                                    <a href='news.html' >News</a>
+                                </li>
+                                <li>
+                                    <a href='testimonials.html' >Testimonials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='careers.html'>Careers</a>
+                                </li>
+                                <li>
+                                    <a href='getintouch.html'>Get in Touch</a>
+                                </li>
+                            </ul>
+                        </li> 
+                    </ul>
+                    <!-- Menu - End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Top Bar - End -->
+    <!-- Logo and Mobile Menu - Start -->
+    <div class='header-logo-wrap'>
+        <div class="container">
+            <div class="logo col-xs-2">
+                <a href="index.html"><img src="./assets2/img/Logo-animation-_GIF_v3.gif" alt="M-ideas" style="height: 80px;"></a>
+            </div>
+            <div class="menu-mobile col-xs-10 pull-right cssmenu">
+                <i class="mdi mdi-menu menu-toggle"></i>
+                <ul class="menu" id='parallax-mobile-menu'>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Logo and Mobile Menu - End -->
+    <!-- Header Slide - Start -->
+    <div class="header-slide" style="position:relative;">
+        <img alt="header-banner-image" src="img/banner-3.jpg" class='header-img'>
+        <div class="overlay overlaysmall3">
+            <div class="black inviewport animated delay4" data-effect="fadeInLeftOpacity"></div>
+            <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
+            <!-- Header Text - Start -->
+            <div class="maintext">
+                <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
+                    <div class="left-line">
+                        <h4>Communication</h4>
+                        <h1>Mailers</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Text - End -->
+        </div>
+    </div>
+    <!-- Header Slide - End -->
+</section>
+<!-- Section End - Header -->
+<!-- Section Start - Material Design Icons -->
+<section  id='team'>
+    <div class="container">
+        <div class="row">
+            <h1 class="heading">Internal Communication Mailers</h1>
+            <div class="headul"></div>
+            <p class="subheading">M-Ideas excels in fostering a cohesive internal
+                environment through meticulously crafted mailers.
+                These aren't just creatives; they're vehicles of culture,
+                disseminating important updates, fostering a sense of
+                belonging, and embodying the spirit of your
+                organisation.</p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <h1 class="heading">Some Glimpse of Our Work</h1>
+            <div class="headul"></div>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/mailer- (3).jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/mailer- (5).jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/mailer- (16).jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/mailer- (1).jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+        </div>
+        <!-- Add Navigation -->
+        <div style="color: transparent; background-color: transparent;" class="swiper-button-next"></div>
+        <div style="color: transparent; background-color: transparent;" class="swiper-button-prev"></div>
+</section><br><br><br><br><br><br><br><br>
+<section  id='team'>
+    <div class="container">
+        <div class="row">
+            <h1 class="heading">External Communication Mailers</h1>
+            <div class="headul"></div>
+            <p class="subheading">Precision is our language when it comes to reaching
+                beyond organisational borders. M-Ideas, adept in external
+                communication mailers, crafts messages that resonate
+                with your audience. Newsletters, promotional emails, or
+                event invitations – each piece is meticulously designed to
+                strengthen your brand's external relationships.</p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <h1 class="heading">Some Glimpse of Our Work</h1>
+            <div class="headul"></div>
+        </div>
+    </div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/mailer- (14).jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/Table Tent Card.jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/mailer- (11).jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Playlist/Yes Bank _PREMIA_Creative_3.jpg" alt="Design & Strategy Icon">
+                </div>
+            </div>
+        </div>
+        <!-- Add Navigation -->
+        <div style="color: transparent; background-color: transparent;" class="swiper-button-next"></div>
+        <div style="color: transparent; background-color: transparent;" class="swiper-button-prev"></div>
+</section><br><br><br><br><br><br><br><br>
+<!-- Section End - Material Design Icons -->
+<!-- Section Start - Footer -->
+<section class='footer bg-black padding-bottom-50 '><div class="container">
+    <div class="row">
+        <!-- Text Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1" data-effect="fadeInUp">
+            <div class="logo">
+                <span>Caliber</span>
+            </div>
+            <p>This is a unique & creatively designed layout built in Photoshop with a modern look. All the files are well organized and named as per content. Its very easy to change any part.</p>
+            <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
+        </div>
+        <!-- Text Widget - End -->
+        <!-- Twitter Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 twitter-widget inviewport animated delay2" data-effect="fadeInUp">
+            <h4>Twitter</h4>
+            <div class="headul left-align"></div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message"><strong>@thePixelsTheme</strong> Actually preparing a blog :)  <small>10 minutes ago</small></div>
+            </div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message">Inspired by <strong>@mattjohn</strong> #10Bootstrap #vime <small>30 minutes ago</small></div>
+            </div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message"><strong>@AmazingDesign</strong> Current design trends of a blog <small>1 hour ago</small></div>
+            </div>
+        </div>
+        <!-- Twitter Widget - End -->
+        <!-- Flickr Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 flickr-widget inviewport animated delay3" data-effect="fadeInUp">
+            <h4>Flickr</h4>
+            <div class="headul left-align"></div>
+            <div class="row images">
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-1.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-2.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-3.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-4.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-5.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-6.jpg" class="img-responsive"></div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-7.jpg" class="img-responsive"></div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-8.jpg" class="img-responsive"></div>
+            </div>
+        </div>
+        <!-- Flickr Widget - End -->
+    </div>
+</div>
+<!-- Copyright Bar - Start -->
+<div class="copyright">
+    <div class="col-md-12">
+        <div class="container">
+            <div class="">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
+                    <span class="">&copy; 2015 CALIBER theme | Made by THEMEPASSION</span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
+                    <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright Bar - End -->
+</section>
+<!-- Section End - Footer -->
+<script src="assets2/js/jquery-3.3.1.min.js"></script>
+<script src="assets2/js/popper.min.js"></script>
+<script src="assets2/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets2/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets2/js/isInViewport.jquery.js"></script>
+<script src="assets2/js/jquery.magnific-popup.min.js"></script>
+<script src="assets2/js/scrolla.jquery.min.js"></script>
+<script src="assets2/js/jquery.validate.min.js"></script>
+<script src="assets2/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+<script src="assets2/js/odometer.min.js"></script>
+<script src="assets2/js/owl.carousel.min.js"></script>
+<script src="assets2/js/jquery.vide.min.js"></script>
+<script src="assets2/js/custom.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+</script>
+</body>
+</html>

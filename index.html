@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caliber - Multi Purpose HTML Template</title>
+        <meta charset="utf-8"/>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+
+
+<!---
+    Counter links
+-->
+        <link rel="stylesheet" href="assets2/Counter/odometer2.css">
+        <script type="text/javascript" src="js/pace.min.js"></script>
+        <link href="css/pace-loading-bar.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/animate.caliber.css">
+        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/jquery.viewportchecker.min.js"></script>
+        <!--Mixitup -->
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <!--Fancybox -->
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+        <!-- Main Style -->
+        <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="icon" href="./img/Mi - Logo.svg">
+        <script type="text/javascript" src="js/main.js"></script>
+        <style>
+            .slider {
+        padding: 40px 0;
+        }
+    
+        .slider .slide {
+            
+            height: 140px;
+            padding-right: 120px;
+            position: relative;
+        }
+    
+        .slider .slide img {
+            
+            max-width: none;
+            opacity: 0;
+            transition: 0.1s ease-out;
+        }
+        .slider .slide:before {
+            
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: contain !important;
+            opacity: 1;
+            transition: 0.1s ease-out;
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-6900px);
+            }
+        }
+        .slider {
+            
+            height: 140px;
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+        .slider::after {
+            right: 0;
+            top: 0;
+            transform: rotateZ(180deg);
+        }
+        .slider::before {
+            left: 0;
+            top: 0;
+        }
+        .slider .slider-animation {
+            animation: scroll 90s linear infinite;
+            display: flex;
+            /*width: calc(250px * 14);*/
+            width: 6900px;
+        }
+        .slider .slider-animation:hover {
+            animation-play-state: paused;
+        }
+        .slider .slide {
+            height: 80px;
+            padding-right: 120px;
+            position: relative;
+        }
+    
+        .slider .slide img {
+            max-width: none;
+            opacity: 0;
+            transition: 0.1s ease-out;
+        }
+        .slider .slide:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-size: contain !important;
+            opacity: 1;
+            transition: 0.1s ease-out;
+        }
+        .slider .slider-animation:hover .slide:hover:before {
+            opacity: 0;
+        }
+        .slider .slider-animation:hover .slide:hover  img{
+            height: 78;
+            opacity: 1;
+        }
+        .slider .slide.birla:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0013_Aditya-Birla-Capital.png") no-repeat;
+        }
+        .slider .slide.sbi:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0022_SBI-General.png") no-repeat;
+        }
+        .slider .slide.bluechip:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0001_Bluechip-logo.png") no-repeat;
+        }
+        .slider .slide.aura:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0004_Aura.png") no-repeat;
+        }
+        .slider .slide.rustic:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0005_Team-Rustic.png") no-repeat;
+        }
+        .slider .slide.hotstuff:before {
+            
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0006_Hotstuff.png") no-repeat;
+        }
+        .slider .slide.neoniche:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0007_neoniche.png") no-repeat;
+        }
+        .slider .slide.pdm:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0008_PDM.png") no-repeat;
+        }
+        .slider .slide.done:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0009_Dome.png") no-repeat;
+        }
+        .slider .slide.ln:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0010_LN---Logo.png") no-repeat;
+        }
+        .slider .slide.aig:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0011_TATA_AIG_logo.png") no-repeat;
+        }
+        .slider .slide.axis:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0012_Axis-Bank.png") no-repeat;
+        }
+        .slider .slide.hdfc:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0014_HDFC_Life_Logo.svg.png") no-repeat;
+        }
+        .slider .slide.yes:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0015_yes_bank_logo.png") no-repeat;
+        }
+        .slider .slide.icici:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0016_ICICI_Bank_Logo.png") no-repeat;
+        }
+        .slider .slide.cigna:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0017_ManipalCigna-min.png") no-repeat;
+        }
+        .slider .slide.icici_pru:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0018_ICICI_Prudential.png") no-repeat;
+        }
+        .slider .slide.rnlic:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0019_RNLIC.png") no-repeat;
+        }
+        .slider .slide.global:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0020_Global-Connect-Logo-01.png") no-repeat;
+        }
+        .slider .slide.aia:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0021_tata-aia-02.png") no-repeat;
+        }
+        .slider .slide.general:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0022_SBI-General.png") no-repeat;
+        }
+        .slider .slide.raymond:before {
+            background: url("./img/LOGO_OF_BRAND/Logo_Gray/Logos-Grey_0000_Raymond.png") no-repeat;
+        }
+            
+            .swiper-container {
+                width: 100%;
+                height: 100%;
+            }
+        
+            .swiper-slide {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .card {
+                margin-left: 15%;
+                width: 80%;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+            
+            .card img {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 20px;
+            }
+            
+            .card h3 {
+                margin-bottom: 10px;
+            }
+            
+            .card p {
+                color: #666;
+            }
+            </style>
+    </head>
+    <body class=" horizontal  yellow">
+        <!-- Section Start - Header -->
+        <audio id="hover-audio" preload="auto" >
+            <source src="./assets2/music/13120 village rooster crowing.wav" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="hover-audio2" preload="auto">
+            <source src="./assets2/music/wheel ticker.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <section class="header bg-lightgray header-1" >
+            <!-- Menu Top Bar - Start -->
+            <div class="topbar" data-effect="fadeIn">
+                <div class="menu">
+                    <div class="primary inviewport animated delay4" data-effect="fadeInRightBig">
+                        <div class='cssmenu'>
+                            <!-- Menu - Start -->
+                            <ul class='menu-ul'><li class='has-sub'>
+                                <a href='index.html'>Home</a>
+                            <li class='has-sub'>
+                                <a href='about-us.html'>About Us</a>
+                            </li>
+                            <li class='has-sub'>
+                                <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                                <ul>
+                                    <li>
+                                        <a href='audiovideo.html'>Audio & Video Content</a>
+                                    </li>
+                                    <li>
+                                        <a href='static.html'>Static Content</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <!-- Menu - End -->
+                    </div>
+                </div>
+                <div class="black inviewport animated delay4" data-effect="fadeInLeftBig">
+                    <div class='cssmenu'>
+                        <!-- Menu - Start -->
+                        <ul class='menu-ul'>
+                        <li class='has-sub'>
+                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Content Production'>Content Production</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Digital Innovations'>Digital Innovations</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Media Design'>Media Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='blogs.html'>Blogs</a>
+                                </li>
+                                <li>
+                                    <a href='news.html' >News</a>
+                                </li>
+                                <li>
+                                    <a href='testimonials.html' >Testimonials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='careers.html'>Careers</a>
+                                </li>
+                                <li>
+                                    <a href='getintouch.html'>Get in Touch</a>
+                                </li>
+                            </ul>
+                        </li> 
+                    </ul>
+                    <!-- Menu - End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Top Bar - End -->
+    <!-- Logo and Mobile Menu - Start -->
+    <div class='header-logo-wrap'>
+        <div class="container">
+            <div class="logo col-xs-2">
+                <a href="index.html"><img src="./assets2/img/Logo-animation-_GIF_v3.gif" alt="M-ideas" style="height: 80px;"></a>
+            </div>
+            <div class="menu-mobile col-xs-10 pull-right cssmenu">
+                <i class="mdi mdi-menu menu-toggle"></i>
+                <ul class="menu" id='parallax-mobile-menu'>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Logo and Mobile Menu - End -->
+    <!-- Header Slide - Start -->
+    <div class="header-slide" style="position:relative;">
+        <video autoplay muted loop id="header-video" class="header-img" alt="header-banner-image" width="100&" height="100%" poster="img/banner-1.jpg">
+            <source src="./assets2/videos/MI Web video v2 no text.mp4" type="video/mp4">
+        </video>
+
+        
+        <!---img alt="header-banner-image" src="img/banner-1.jpg" class='header-img'-->
+        <div class="overlay overlay1">
+            <div class="black inviewport animated delay4" data-effect="fadeInLeftOpacity"></div>
+            <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
+            <!-- Header Text - Start -->
+            <div class="maintext">
+                <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
+                    <div class="left-line">
+                        <h4>Where</h4>
+                        <h1>ideas come</h1>
+                    </div>
+                </div>
+                <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
+                    <div>
+                        <h1>alive</h1>
+                        <br>
+                        <P style="color: black; font-size: 25px; font-weight: 500;">Turning your digital <span style="color: red;">aspirations</span> into a vivid <span style="color: red;">reality</span>!</P>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Text - End -->
+        </div>
+    </div>
+    <!-- Header Slide - End -->
+</section>
+<!-- Section End - Header -->
+<!-- Section Start - Why Choose Us -->
+<section >
+    <div class="container">
+        <div class="row">
+            <h1 class="heading">Who we are ?</h1>
+            <div class="headul"></div>
+            <p class="subheading">Welcome to M-ideas Digital Wonderland - where innovation meets impact! At Mideass,
+                we're not just pioneers; we're architects of the future, sculpting a digital landscape where
+                possibilities are limitless. <br>
+                <a class="btn btn-primary text-on-primary"  href="about-us.html">Read More</a>
+
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/Idea.png" alt="Design & Strategy Icon">
+                    <h5>DESIGN & STRATEGY</h5>
+                    <p>Ingenious strategies with a splash of design magic to make your brand unforgettable!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/content.jpg" alt="Content Production Icon">
+                    <h5>CONTENT PRODUCTION</h5>
+                    <p>Transform mundane to magical with words that dance, dazzle, and deliver delight!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/digital marketing.png" alt="Digital Marketing Icon">
+                    <h5>DIGITAL MARKETING</h5>
+                    <p>Turn your brand's whisper into a digital roar with a touch of quirky genius!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/digital innovation.png" alt="Digital Innovations Icon">
+                    <h5>DIGITAL INNOVATIONS</h5>
+                    <p>Pixels into poetry, our digital innovations spark joy and ignite imaginations in the digital world!</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="card">
+                    <img src="./img/interactive media.png" alt="Media Design Icon">
+                    <h5>MEDIA DESIGN</h5>
+                    <p>Tell your brand's story with our perfect designs and creative wizardry!</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add Navigation -->
+        <div style="color: transparent; background-color: transparent;" class="swiper-button-next"></div>
+        <div style="color: transparent; background-color: transparent;" class="swiper-button-prev"></div>
+    </div>
+</section><br><br><br><br><br><br><br><br>
+<!-- Section End - Why Choose Us -->
+<!-- Section Start - Services -->
+<section class='bg-primary services max-width-100  ' id='services'><div class="container">  <div class="row">
+    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="heading text-white left-align" style="color: black;">Solutions</h1>
+        <div class="headul white left-align"></div>
+        <p class="subheading text-white left-align" style="color: black;">Features & Specifications</p>
+        <p style="color: black;">Your wish is our command! Dive into our range of services to boost your presence across the globe.</p>
+        <p style="color: black;">With experts in our team from every field, we are ready to serve and save your everyday!</p>
+        <a class="btn btn-primary text-on-primary" style="background-color: black; color: yellow;"  href="solution.html">Read More</a>
+    </div>
+    <div class="col-lg-9 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 service-tablets">
+        <div class="tablet-black inviewport animated delay1" data-effect="fadeInRight"><img alt="tablet-black" src="img/tablet-black-blue.png" class="style-dependent img-responsive"></div>
+        <div class="tablet-white inviewport animated delay2" data-effect="fadeInRight"><img alt="tablet-white" src="img/tablet-white-green.png" class="style-dependent img-responsive"></div>
+    </div>
+</div>
+</div></section>
+<!-- Section End - Services -->
+<section class="parallax capabilities" id="capabilities">
+    <div class="bg-overlay"></div>
+    <div class="container">
+        <div class="row">
+            <h1 class="heading">Our Capabilities</h1>
+            <div class="headul"></div>
+            <p class="subheading">Our company is driven by a passion for innovation, excellence, and client satisfaction, delivering unparalleled results that redefine industry standards.</p>
+            
+                <div class="container ts-promo-numbers">
+                    <div class="row" style="color: white; font-size: 60px;">
+    
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="50" style=" margin-bottom: 10px;">0</figure>
+                                <span style="margin-left: -10px;">+</span>
+                                <hr style="width: 130px; margin-top: -1px;">
+                                <h5 style="color: #F2E30E; font-size: 25px; font-weight: 200;">Clients</h5>
+                            </div>
+                        </div>
+                        <!--end Promo number-->
+    
+                        <div class="col-sm-6 col-md-6">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="185000" style="margin-bottom: 10px;">0</figure>
+                                <span style=" margin-left: -10px;">+</span>
+                                <hr style="width: 280px; margin-top: -1px;">
+                                <h5 style="color: #F2E30E; font-size: 25px; font-weight: 300;">Projects Completed</h5>
+                            </div>
+                        </div>
+    
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="18" style="margin-bottom: 10px;">0</figure>
+                                <span style="margin-left: -10px;">+</span>
+                                <hr style="width: 130px; margin-top: -1px;">
+                                <h5 style="color: #F2E30E; font-size: 25px; font-weight: 200;">Years of Experience</h5>
+                            </div>
+                        </div>
+                        <!--end Promo number-->
+    
+                    </div>
+                </div>
+            </section>
+<!-- Section Start - Portfolio -->
+<section  id='portfolio'><div class="container">
+<div class="row gallery-row">
+    <h1 class="heading">Our Gallery</h1>
+    <div class="headul"></div>
+    <p class="subheading">From lively brainstorming sessions to team-building adventures, our office culture blends productivity with a dash of fun, creating an environment where creativity thrives.</p>
+    <!-- Portfolio Items - Start -->
+    <div class="filter-items filter-mixitup  inviewport animated " data-effect="fadeIn" id="gallery-mixitup">
+        <!-- Item - Start -->
+        <div class="filter-item development col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-1.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-1.jpg"><i class="mdi mdi-image-area"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item photography col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-2.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-2.jpg"><i class="mdi mdi-video"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-3.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-3.jpg"><i class="mdi mdi-image-area"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item branding col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-4.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-4.jpg"><i class="mdi mdi-image-area"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item development col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-5.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-5.jpg"><i class="mdi mdi-image-area"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item photography col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-6.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-6.jpg"><i class="mdi mdi-video"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-7.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-7.jpg"><i class="mdi mdi-video"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="filter-item branding col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" src="img/gallery-8.jpg" class="img-responsive transition">
+            <div class="info transition">
+                <a class="btn btn-primary fancybox" title="Test Title of this item" data-fancybox-group="gallery" href="img/gallery-8.jpg"><i class="mdi mdi-image-area"></i></a>
+            </div>
+        </div>
+        <!-- Item - End -->
+    </div>
+    <!-- Portfolio Items - End -->
+</div>
+</div></section>
+<!-- Section End - Portfolio  -->
+<!-- Section Start - Clients -->
+<section class='bg-primary clients padding-top-40 padding-bottom-40' style="background-color:rgb(241, 223, 190);">
+    <div class="container1" style="padding-right: 50px; padding-left: 50px; padding-top: 100px; padding-bottom: 120px;">   
+        <div class="slider">
+        <div class="slide-track slider-animation">
+            <div class="slide birla">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0013_Aditya-Birla-Capital.png" height="82"  alt="yahoo" />
+            </div>
+            <div class="slide sbi">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0022_SBI-General.png" height="82"  alt="bloomberg" />
+            </div>
+            <div class="slide bluechip">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0001_Bluechip-logo.png" height="82"  alt="forbes" />
+            </div>
+            <div class="slide aura">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0004_Aura.png" height="82"  alt="forklog" />
+            </div>
+            <div class="slide rustic">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0005_Team-Rustic.png" height="82" alt="ain" />
+            </div>
+            <div class="slide hotstuff">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0006_Hotstuff.png" height="82" alt="vector" />
+            </div>
+            <div class="slide neoniche">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0007_neoniche.png" height="82" alt="inventure" />
+            </div>
+
+            <div class="slide pdm">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0008_PDM.png" height="82" alt="yahoo" />
+            </div>
+            <div class="slide done">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0009_Dome.png" height="82" alt="bloomberg" />
+            </div>
+            <div class="slide ln">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0010_LN---Logo.png" height="82"  alt="forbes" />
+            </div>
+            <div class="slide aig">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0011_TATA_AIG_logo.png" height="82" alt="forklog" />
+            </div>
+            <div class="slide axis">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0012_Axis-Bank.png" height="82" alt="ain" />
+            </div>
+            <div class="slide hdfc">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0014_HDFC_Life_Logo.svg.png" height="82"  alt="vector" />
+            </div>
+            <div class="slide yes">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0015_yes_bank_logo.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide icici">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0016_ICICI_Bank_Logo.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide cigna">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0017_ManipalCigna-min.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide icici_pru">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0018_ICICI_Prudential.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide rnlic">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0019_RNLIC.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide global">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0020_Global-Connect-Logo-01.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide aia">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0021_tata-aia-02.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide general">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0022_SBI-General.png" height="82"  alt="inventure" />
+            </div>
+            <div class="slide raymond">
+                <img src="./img/LOGO_OF_BRAND/Logo_color/Logos-Color_0000_Raymond.png" height="82"   alt="inventure" />
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Section End - Clients -->
+<!-- Section Start - Blogs -->
+<section class='bg-lightgray  '><div class="container">
+<div class="row">
+<h1 class="heading">Latest Blog</h1>
+<div class="headul"></div>
+<p class="subheading">Discover how our creative strategies and cutting-edge production services elevate brands to new heights through our thought provoking and insightful blogs.</p>
+<!-- Blog - Start -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blog blog_altered blog_left">
+    <div class="row">
+        <!-- Blog Image - Start -->
+        <div class=" col-lg-6 col-md-6 col-sm-10 col-xs-12  pic inviewport animated delay1" data-effect="fadeIn">
+            <img alt="blog-image" class="img-responsive" src="img/blog-medium-1.jpg">
+        </div>
+        <!-- Blog Image - End -->
+        <!-- Blog Info - Start -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 inviewport animated delay1" data-effect="fadeIn">
+            <div class="info">
+                <span class="date">24th August 2015</span>
+                <h4 class="title"><a href="blogs.html">Ten amazing and strange pictures by professionals</a></h4>
+                <p>Donec pede justo, fringilla, aliquet nec, vulputatee egerdiet erdiett arcu. In  justo, rhoncus ut, imperdiet a, venenatis vitaerdiet erde justo. llam dictum felis eu pede mollis pretium diet a, venenatis vita sto. Nullam dictum felis eu pede mollis pretiumdiet a, venenatis ie ust. ullam dictum felis eu pedemol iumpretium ieta...</p>
+                <a class="btn btn-primary text-on-primary"  href="blogs.html">Read More</a>
+            </div>
+        </div>
+        <!-- Blog Info - End -->
+    </div>
+</div>
+<!-- Blog - End -->
+<!-- Blog - Start -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 blog blog_altered blog_right">
+    <div class="row">
+        <!-- Blog Image - Start -->
+        <div class=" col-xs-12 col-sm-10 hidden-md hidden-lg  pic inviewport animated delay1" data-effect="fadeIn">
+            <img alt="blog-image" class="img-responsive" src="img/blog-medium-4.jpg">
+        </div>
+        <!-- Blog Image - End -->
+        <!-- Blog Info - Start -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 inviewport animated delay1" data-effect="fadeIn">
+            <div class="info">
+                <span class="date">24th August 2015</span>
+                <h4 class="title"><a href="blogs.html">Ten amazing and strange pictures by professionals</a></h4>
+                <p>Donec pede justo, fringilla, aliquet nec, vulputatee egerdiet erdiett arcu. In  justo, rhoncus ut, imperdiet a, venenatis vitaerdiet erde justo. llam dictum felis eu pede mollis pretium diet a, venenatis vita sto. Nullam dictum felis eu pede mollis pretiumdiet a, venenatis ie ust. ullam dictum felis eu pedemol iumpretium ieta...</p>
+                <a class="btn btn-primary text-on-primary"  href="blogs.html">Read More</a>
+            </div>
+        </div>
+        <!-- Blog Info - End -->
+        <!-- Blog Image - Start -->
+        <div class=" col-lg-6 col-md-6 hidden-sm hidden-xs  pic inviewport animated delay1" data-effect="fadeIn">
+            <img alt="blog-image" class="img-responsive" src="img/blog-medium-4.jpg">
+        </div>
+        <!-- Blog Image - End -->
+    </div>
+</div>
+<!-- Blog - End -->
+</div>
+</div></section>
+<!-- Section End - Blogs -->
+<!-- Section Start - Footer -->
+<section class='footer bg-black padding-bottom-50 '><div class="container">
+    <div class="row">
+        <!-- Text Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1" data-effect="fadeInUp">
+            <div class="logo">
+                <span>Caliber</span>
+            </div>
+            <p>This is a unique & creatively designed layout built in Photoshop with a modern look. All the files are well organized and named as per content. Its very easy to change any part.</p>
+            <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
+        </div>
+        <!-- Text Widget - End -->
+        <!-- Twitter Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 twitter-widget inviewport animated delay2" data-effect="fadeInUp">
+            <h4>Twitter</h4>
+            <div class="headul left-align"></div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message"><strong>@thePixelsTheme</strong> Actually preparing a blog :)  <small>10 minutes ago</small></div>
+            </div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message">Inspired by <strong>@mattjohn</strong> #10Bootstrap #vime <small>30 minutes ago</small></div>
+            </div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message"><strong>@AmazingDesign</strong> Current design trends of a blog <small>1 hour ago</small></div>
+            </div>
+        </div>
+        <!-- Twitter Widget - End -->
+        <!-- Flickr Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 flickr-widget inviewport animated delay3" data-effect="fadeInUp">
+            <h4>Flickr</h4>
+            <div class="headul left-align"></div>
+            <div class="row images">
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-1.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-2.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-3.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-4.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-5.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-6.jpg" class="img-responsive"></div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-7.jpg" class="img-responsive"></div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-8.jpg" class="img-responsive"></div>
+            </div>
+        </div>
+        <!-- Flickr Widget - End -->
+    </div>
+</div>
+<!-- Copyright Bar - Start -->
+<div class="copyright">
+    <div class="col-md-12">
+        <div class="container">
+            <div class="">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
+                    <span class="">&copy; 2015 CALIBER theme | Made by THEMEPASSION</span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
+                    <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright Bar - End -->
+</section>
+<!-- Section End - Footer -->
+<script src="assets2/js/jquery-3.3.1.min.js"></script>
+<script src="assets2/js/popper.min.js"></script>
+<script src="assets2/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets2/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets2/js/isInViewport.jquery.js"></script>
+<script src="assets2/js/jquery.magnific-popup.min.js"></script>
+<script src="assets2/js/scrolla.jquery.min.js"></script>
+<script src="assets2/js/jquery.validate.min.js"></script>
+<script src="assets2/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+<script src="assets2/js/odometer.min.js"></script>
+<script src="assets2/js/owl.carousel.min.js"></script>
+<script src="assets2/js/jquery.vide.min.js"></script>
+<script src="assets2/js/custom.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" ></script>
+<script>
+     var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+  <script>
+      const mainText = document.querySelector('.maintext');
+      const sound = new Howl({
+          src: ['./assets2/music/13120 village rooster crowing.wav', './assets2/music/13120_village_rooster_crowing.ogg', './assets2/music/13120_village_rooster_crowing.wav'],
+          preload: true
+      });
+       
+      // Play audio on hover
+      mainText.addEventListener('mouseenter', () => {
+          sound.stop(); // Stop any current playing audio
+          sound.play();
+      });
+  
+      // Optional: Pause audio on mouse leave
+      mainText.addEventListener('mouseleave', () => {
+          sound.pause();
+      });
+  </script>
+  <script>
+      const headerSlide1 = document.getElementById('audio-wheel');
+      const audio1 = document.getElementById('hover-audio2');
+  
+      // Play audio on hover
+      headerSlide1.addEventListener('mouseenter', () => {
+          audio1.currentTime = 0; // Reset audio to start
+          audio1.play().catch(error => {
+              console.log('Autoplay prevented:', error);
+          });
+      });
+  
+      // Optional: Pause audio on mouse leave
+      headerSlide1.addEventListener('mouseleave', () => {
+          audio1.pause();
+      });
+  
+      // Ensure audio is ready to play
+      window.addEventListener('load', () => {
+          audio1.load();
+      });
+      
+  </script>
+</body>
+</html>

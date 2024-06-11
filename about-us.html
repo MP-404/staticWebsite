@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Caliber - Multi Purpose HTML Template</title>
+        <meta charset="utf-8"/>
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="js/pace.min.js"></script>
+        <link href="css/pace-loading-bar.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/animate.caliber.css">
+        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script src="js/jquery.viewportchecker.min.js"></script>
+        <!--Mixitup -->
+        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+        <!--Fancybox -->
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+        <!-- Main Style -->
+        <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
+        <link rel="icon" href="./img/Mi - Logo.svg">
+        <script type="text/javascript" src="js/main.js"></script>
+        <style>
+        .text-typing { 
+            /* padding: 20px 30px; 
+            background: #f5f5f5;  */
+            font-size: 35px; 
+            /* font-family: monospace;  */
+            border-radius: 50px; 
+            overflow: hidden; 
+            position: relative; 
+        } 
+  
+        .text-typing p { 
+            margin-left: 10%; 
+            white-space: nowrap; 
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0); 
+            animation: typing 4s steps(22, end) forwards, blink 1s infinite; 
+        } 
+  
+        @keyframes typing { 
+            0% { 
+                width: 0% 
+            } 
+  
+            100% { 
+                width: 100% 
+            } 
+        } 
+  
+        @keyframes blink { 
+  
+            0%, 
+            100% { 
+                border-right: 2px solid transparent; 
+            } 
+  
+            50% { 
+                border-right: 2px solid transparent; 
+            } 
+        } 
+        </style>
+       
+    </head>
+    <body class=" horizontal  yellow">
+        <!-- Section Start - Header -->
+        <section class="header bg-lightgray header-1" >
+            <!-- Menu Top Bar - Start -->
+            <div class="topbar" data-effect="fadeIn">
+                <div class="menu">
+                    <div class="primary inviewport animated delay4" data-effect="fadeInRightBig">
+                        <div class='cssmenu'>
+                            <!-- Menu - Start -->
+                            <ul class='menu-ul'><li class='has-sub'>
+                                <a href='index.html'>Home</a>
+                            <li class='has-sub'>
+                                <a href='about-us.html'>About Us</a>
+                            </li>
+                            <li class='has-sub'>
+                                <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                                <ul>
+                                    <li>
+                                        <a href='audiovideo.html'>Audio & Video Content</a>
+                                    </li>
+                                    <li>
+                                        <a href='static.html'>Static Content</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <!-- Menu - End -->
+                    </div>
+                </div>
+                <div class="black inviewport animated delay4" data-effect="fadeInLeftBig">
+                    <div class='cssmenu'>
+                        <!-- Menu - Start -->
+                        <ul class='menu-ul'>
+                        <li class='has-sub'>
+                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Content Production'>Content Production</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Digital Innovations'>Digital Innovations</a>
+                                </li>
+                                <li>
+                                    <a class="link" href='solution.html#Media Design'>Media Design</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='blogs.html'>Blogs</a>
+                                </li>
+                                <li>
+                                    <a href='news.html' >News</a>
+                                </li>
+                                <li>
+                                    <a href='testimonials.html' >Testimonials</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class='has-sub'>
+                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='careers.html'>Careers</a>
+                                </li>
+                                <li>
+                                    <a href='getintouch.html'>Get in Touch</a>
+                                </li>
+                            </ul>
+                        </li> 
+                    </ul>
+                    <!-- Menu - End -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Top Bar - End -->
+    <!-- Logo and Mobile Menu - Start -->
+    <div class='header-logo-wrap'>
+        <div class="container">
+            <div class="logo col-xs-2">
+                <a href="index.html"><img src="./assets2/img/Logo-animation-_GIF_v3.gif" alt="M-ideas" style="height: 80px;"></a>
+            </div>
+            <div class="menu-mobile col-xs-10 pull-right cssmenu">
+                <i class="mdi mdi-menu menu-toggle"></i>
+                <ul class="menu" id='parallax-mobile-menu'>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Logo and Mobile Menu - End -->
+    <!-- Header Slide - Start -->
+    <div class="header-slide" style="position:relative;">
+        <img alt="header-banner-image" src="img/banner-1.jpg" class='header-img'>
+        <div class="overlay overlaysmall1">
+            <div class="black inviewport animated delay4" data-effect="fadeInLeftOpacity"></div>
+            <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
+            <!-- Header Text - Start -->
+            <div class="maintext">
+                <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
+                    <div class="left-line">
+                        <h4>Unlocking</h4>
+                        <h1>Tomorrow,</h1>
+                    </div>
+                </div>
+                <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
+                    <div>
+                        <h1>Today!</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Text - End -->
+        </div>
+    </div>
+    <!-- Header Slide - End -->
+</section>
+<!-- Section End - Header -->
+<!-- Section Start - Elegant Design -->
+<section ><div class="container">
+    <div class="row">
+        <!-- Mobile Screens - Start -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 screen-area hidden-sm hidden-xs">
+            <div class="elegant-screen">
+                <img alt="elegant-screen" src="img/Mockup-image/Mockup-image-2.png" class="img-responsive screen-1 style-dependent inviewport animated delay1" data-effect="fadeIn">
+                <img alt="elegant-screen" src="img/Mockup-image/Mockup-image.png" class="img-responsive screen-2 style-dependent inviewport animated delay3" data-effect="fadeIn">
+            </div>
+        </div>
+        <!-- Mobile Screens - End -->
+        <!-- Elegant Text - Start -->
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-area">
+            <h1 class="heading left-align" style="font-size: 45px; line-height: 1.2;">An<br>integrated&nbsp;marketing<br>solutions&nbsp;company</h1>
+            <div class="headul left-align"></div>
+            <p>Backed with the experience of years our team has mastered the art and science of quality
+                creative solutions ranging from graphic design to multimedia, from competition analysis to
+                innovative campaign concepts, from software support to brick and mortar on ground
+                execution support for some of the largest mission critical events in the industry.</p>
+                <p>Firmly grounded on the <span style="color: #F2E30E;">Values</span> Values of ethics, integrity, passion, diligence, humility and <br><br>
+                    challenging our own limits; our <span style="color: #F2E30E;">Mission</span> to provide innovative and refreshing creative <br><br>
+                    solutions to our clients, resonates with our <span style="color: #F2E30E;">Vision</span> to be one of the most respected.</p>
+            <p class="margin-bottom-50"></p>
+        </div>
+        <!-- Elegant Text - End -->
+        <!-- Mobile Screens (Mobile View)- Start -->
+        <div class="col-xs-12 screen-area hidden-lg hidden-md">
+            <div class="elegant-screen">
+                <img alt="elegant-screen" src="img/Mockup-image/Mockup-image-2.png" class="img-responsive screen-1">
+                <img alt="elegant-screen" src="img/Mockup-image/Mockup-image.png" class="img-responsive screen-2">
+            </div>
+        </div>
+        <!-- Mobile Screens (Mobile View)- End -->
+    </div>
+</div></section>
+<!-- Section End - Elegant Design -->
+<!-- Section Start - Why Choose Us -->
+<section class='section-features bg-primary max-width-100'>
+    <div class="container">
+    <div class="row">
+        <h1 class="heading" style="color: black;">Why Choose Us?</h1>
+        <div class="headul"></div>
+        <div class="text-typing"> 
+            <h2 class="subheading" style="color: black; font-size: 35px;">Because We Craft Innovative Strategies, Stunning Designs, and Engaging Campaigns!</h1> 
+        </div> 
+    </div>
+</div></section>
+<!-- Section End - Why Choose Us -->
+<!-- Section Start - Meet Our Team -->
+<section  id='team'><div class="container">
+    <div class="row">
+        <h1 class="heading">MEET OUR CORE TEAM</h1>
+        <div class="headul"></div>
+        <div class="features">
+            <!-- Effect Box - Start -->
+            
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="flipInX">
+                    <img style="height: 400px; width: 400px;" src="./img/animal1.webp" alt="">
+                    <h4>Divesh Sharma</h4>
+                    <p>Graphics</p>
+                </div>
+            </div>
+            <div class="clearfix hidden-sm"></div>
+            <!-- Effect Box - End -->
+            <!-- Effect Box - Start -->
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-4 col-md-offset-4 col-sm-offset-0 col-xs-offset-0  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="flipInY">
+                    <img style="height: 400px; width: 400px;" src="./img/animal2.jpg" alt="">
+                    <h4>Bhupendra Varshney</h4>
+                    <p>Graphics</p>
+                </div>
+            </div>
+            <div class="clearfix hidden-sm"></div>
+            <!-- Effect Box - End -->
+            <!-- Effect Box - Start -->
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-8 col-md-offset-8 col-sm-offset-0 col-xs-offset-0  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="fadeInDown">
+                    <img style="height: 400px; width: 400px;" src="./img/animal3.jpg" alt="">
+                    <h4>Shyamli Mishra</h4>
+                    <p>Content</p>
+                </div>
+            </div>
+            <div class="clearfix hidden-sm"></div>
+            <!-- Effect Box - End -->
+            <!-- Effect Box - Start -->
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-4 col-md-offset-4 col-sm-offset-0 col-xs-offset-0  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="fadeInLeft">
+                    <img style="height: 400px; width: 400px;" src="./img/animal4.jpg" alt="">
+                    <h4>Aditya Bhadauriya</h4>
+                    <p>Developer</p>
+                </div>
+            </div>
+            <div class="clearfix hidden-sm"></div>
+            <!-- Effect Box - End -->
+            <!-- Effect Box - Start -->
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="fadeInRight">
+                    <img style="height: 400px; width: 400px;" src="./img/animal5.jpg" alt="">
+                    <h4>Margaret Dsouza</h4>
+                    <p>H.R.</p>
+                </div>
+            </div>
+            <div class="clearfix hidden-sm"></div>
+            <!-- Effect Box - End -->
+            <!-- Effect Box - Start -->
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-4 col-md-offset-4 col-sm-offset-0 col-xs-offset-0  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="bounceIn">
+                    <img style="height: 400px; width: 400px;" src="./img/animal6.jpeg" alt="">
+                    <h4>Preea Alvares</h4>
+                    <p>C.E.O.</p>
+                </div>
+            </div>
+            <div class="clearfix hidden-sm"></div>
+            <!-- Effect Box - End -->
+            <!-- Effect Box - Start -->
+            <div class='col-lg-4 col-md-4 col-sm-6 col-xs-12  col-lg-offset-8 col-md-offset-8 col-sm-offset-0 col-xs-offset-0  effect-box'>
+                <div class="animated inviewport delay4 anim-wrap" data-effect="bounceInUp">
+                    <img style="height: 400px; width: 400px;" src="./img/animal7.jpg" alt="">
+                    <h4>Vivek Lohani</h4>
+                    <p>Director</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></section>
+        <!-- Team Member - End -->
+    </div>
+    </div></section>
+    <!-- Section End - Meet Our Team -->
+<!-- Section Start - Footer -->
+<section class='footer bg-black padding-bottom-50 '><div class="container">
+    <div class="row">
+        <!-- Text Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1" data-effect="fadeInUp">
+            <div class="logo">
+                <span>Caliber</span>
+            </div>
+            <p>This is a unique & creatively designed layout built in Photoshop with a modern look. All the files are well organized and named as per content. Its very easy to change any part.</p>
+            <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
+        </div>
+        <!-- Text Widget - End -->
+        <!-- Twitter Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 twitter-widget inviewport animated delay2" data-effect="fadeInUp">
+            <h4>Twitter</h4>
+            <div class="headul left-align"></div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message"><strong>@thePixelsTheme</strong> Actually preparing a blog :)  <small>10 minutes ago</small></div>
+            </div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message">Inspired by <strong>@mattjohn</strong> #10Bootstrap #vime <small>30 minutes ago</small></div>
+            </div>
+            <div class="tweet">
+                <i class="mdi mdi-twitter"></i>
+                <div class="message"><strong>@AmazingDesign</strong> Current design trends of a blog <small>1 hour ago</small></div>
+            </div>
+        </div>
+        <!-- Twitter Widget - End -->
+        <!-- Flickr Widget - Start -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 flickr-widget inviewport animated delay3" data-effect="fadeInUp">
+            <h4>Flickr</h4>
+            <div class="headul left-align"></div>
+            <div class="row images">
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-1.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-2.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-3.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-4.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-5.jpg" class="img-responsive"></div>
+                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-6.jpg" class="img-responsive"></div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-7.jpg" class="img-responsive"></div>
+                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-8.jpg" class="img-responsive"></div>
+            </div>
+        </div>
+        <!-- Flickr Widget - End -->
+    </div>
+</div>
+<!-- Copyright Bar - Start -->
+<div class="copyright">
+    <div class="col-md-12">
+        <div class="container">
+            <div class="">
+                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
+                    <span class="">&copy; 2015 CALIBER theme | Made by THEMEPASSION</span>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
+                    <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
+                    <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Copyright Bar - End -->
+</section>
+<!-- Section End - Footer -->
+</body>
+</html>
