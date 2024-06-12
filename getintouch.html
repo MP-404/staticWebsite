@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Caliber - Multi Purpose HTML Template</title>
+        <title>M - Ideas | Ideas Alive</title>
         <meta charset="utf-8"/>
         <meta name=viewport content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="js/pace.min.js"></script>
@@ -21,15 +21,100 @@
         <link rel="icon" href="./img/Mi - Logo.svg">
         <script type="text/javascript" src="js/main.js"></script>
         <style>
-            @media (min-width: 1000px)  {
+            @media (min-width: 300px) and (max-width:500px) {
+                section.header .maintext .black-text div{
+                    margin-top: 40%;
+                }
+            }
+            @media (max-width: 600px)  {
                 section.header .maintext .black-text div{
                     margin-top: 25%;
                 }
             }
 
-            @media (min-width: 300px) and (max-width:900px) {
+            @media only screen and (min-width:600px) {
                 section.header .maintext .black-text div{
                     margin-top: 23%;
+                }
+            }
+
+            @media only screen and (min-width:768px) {
+                section.header .maintext .black-text div{
+                    margin-top: 22%;
+                }
+            }
+
+            @media  only screen and (min-width: 992px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 25%;
+                }
+            }
+            @media  only screen and (min-width: 1250px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 25%;
+                }
+            
+            }
+
+            @media  only screen and (min-width: 1400px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 22%;
+                }
+            }
+
+            @media  only screen and (min-width: 1500px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 20%;
+                }
+            }
+
+            @media  only screen and (min-width: 1700px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 20%;
+                }
+            }
+
+            @media  only screen and (min-width: 1900px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 18%;
+                }
+            }
+
+            @media  only screen and (min-width: 2500px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 14%;
+                }
+            }
+
+            @media  only screen and (min-width: 3800px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 11%;
+                }
+            }
+
+            @media  only screen and (min-width: 5000px)  {
+                section.header .maintext .black-text div{
+                    margin-top: 9%;
+                }
+            }
+
+            @media (min-width: 300px) and (max-width:600px){
+                form{
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+
+            @media (min-width: 700px){
+                form{
+                    margin: 0;
+                }
+            }
+
+            @media (min-width: 1000px){
+                form{
+                    margin-left: 50%;
+                    width: 100%;
                 }
             }
         </style>
@@ -79,9 +164,6 @@
                                 </li>
                                 <li>
                                     <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
-                                </li>
-                                <li>
-                                    <a class="link" href='solution.html#Digital Innovations'>Digital Innovations</a>
                                 </li>
                                 <li>
                                     <a class="link" href='solution.html#Media Design'>Media Design</a>
@@ -170,25 +252,21 @@
 </div></section>
 <!-- Section Start - Heading End -->
 <!-- Section Start - Contact Us -->
-<section class="parallax contact" id="contact">
+<section class="parallax contact  " id="contact">
     <div class="bg-overlay opacity-85"></div>
     <div class="container">
         <div>
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 contacts inviewport animated delay1" data-effect="fadeInUp">
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 inviewport animated delay1" data-effect="fadeInUp">
                 <!-- Contact Form - Start -->
                 <form action='send_email.php' method='post'>
-                    <input type='text' placeholder='Name' class='col-xs-12 transition' id='c_name'>
-                    <input type='text' placeholder='Email' class='col-xs-12 transition' id='c_email'>
-                    <input type='text' placeholder='Phone' class='col-xs-12 transition' id='c_phone'>
-                    <textarea class='col-xs-12 transition' placeholder='Message' id='c_message'></textarea>
+                    <input type='text' placeholder='Name' class='col-xs-12 transition' id='c_name' >
+                    <input type='text' placeholder='Email' class='col-xs-12 transition' id='c_email' >
+                    <input type='text' placeholder='Phone' class='col-xs-12 transition' id='c_phone' >
+                    <textarea class='col-xs-12 transition' placeholder='Message' id='c_message' ></textarea>
                     <div id='response_email'></div>
                     <button type='button' class='btn btn-block btn-primary disabled transition' id='c_send'>Send Message</button>
                 </form>
-                    <!-- Contact Form - End -->
-            </div>
-            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 contacts inviewport animated delay1" data-effect="fadeInUp">
-                <!-- Contact Person - Start -->
-                <!-- Contact Person - End -->
+                <!-- Contact Form - End -->
             </div>
         </div>
     </div>

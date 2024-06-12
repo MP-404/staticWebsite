@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Caliber - Multi Purpose HTML Template</title>
+        <title>M - Ideas | Ideas Alive</title>
         <meta charset="utf-8"/>
         <meta name=viewport content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="js/pace.min.js"></script>
@@ -20,43 +20,19 @@
         <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
         <link rel="icon" href="./img/Mi - Logo.svg">
         <script type="text/javascript" src="js/main.js"></script>
-
         <style>
-            /* #category-buttons {
-                text-align: center;
-                margin-bottom: 20px;
-            } */
-
-            #category-buttons button {
-                padding: 10px 20px;
-                margin: 5px;
-                cursor: pointer;
+            .swiper-container {
+                width: 80%;
+                height: auto;
+                margin: auto;
             }
-
-            #image-gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            #image-gallery #big {
-                margin: 10px;
-                max-width: 200px; 
-                /* display: none; */
-            }
-            #image-gallery #small {
-                margin: 10px;
-                max-width: 300px;
-                max-height: 200px;
-                /* display: none; */
-            }
-            @media screen and (min-width:500px){
-                #image-gallery #small{
-                    margin-top: 130px;
+            @media (max-width:500px){
+                .swiper-container .swiper-wrapper .swiper-slide iframe{
+                    width: 300px;
+                    height: 200px;
                 }
             }
         </style>
-
     </head>
     <body class=" horizontal  yellow">
         <!-- Section Start - Header -->
@@ -103,9 +79,6 @@
                                 </li>
                                 <li>
                                     <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
-                                </li>
-                                <li>
-                                    <a class="link" href='solution.html#Digital Innovations'>Digital Innovations</a>
                                 </li>
                                 <li>
                                     <a class="link" href='solution.html#Media Design'>Media Design</a>
@@ -185,27 +158,63 @@
 </section>
 <!-- Section End - Header -->
 <!-- Section Start - Material Design Icons -->
-
-<section>
-    <div class="filter-categories filter-mixitup">
-        <button class="btn filter" onclick="showCategory('all')">All</button>
-        <button class="btn filter" onclick="showCategory('category1')">2D Animation</button>
-        <button class="btn filter" onclick="showCategory('category2')">3D Animation</button>
-        <button class="btn filter" onclick="showCategory('category3')">Logo Animation</button>
-        <button class="btn filter" onclick="showCategory('category4')">Coffee Table Books</button>
-        <a href="static.html"><span class="btn filter">Static Content</span></a>
-    </div>
-    
-    <div id="image-gallery">
-        <!-- Repeat for each image with appropriate category classes -->
-        <img id="big" src="./img/Playlist/AV.jpg" class="category1">
-        <img id="big" src="./img/Playlist/mailer- (1).jpg" class="category2">
-        <img id="big" src="./img/Playlist/mailer- (14).jpg" class="category3">
-        <img id="small" src="./img/Playlist/Photo mockup-03.png" class="category4">
-        <!-- Add more images here -->
-    </div>
-</section>
-
+        <div class="filter-categories filter-mixitup">
+            <button class="btn filter" onclick="showCategory('all')">All</button>
+            <button class="btn filter" onclick="showCategory('category1')">2D Animation</button>
+            <button class="btn filter" onclick="showCategory('category2')">3D Animation</button>
+            <button class="btn filter" onclick="showCategory('category3')">Logo Animation</button>
+            <button class="btn filter" onclick="showCategory('category4')">Coffee Table Books</button>
+            <a href="static.html"><span class="btn filter">Static Content</span></a>
+        </div>
+        
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="video-gallery">
+                <!-- Repeat for each video with appropriate category classes -->
+                <div class="swiper-slide category3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/V6zLKxYQbpY" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tvbZ9G4LqmQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CBGvsDMNOGE" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category3">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_xlMJDrbSgc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DVPnyyxtjaU" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category1">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Rzj3lphFlTo" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category1">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FFSAL3YTd3o" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H2PMLKfpm2M" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category1">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZsusDK_SOiM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category2">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nY2lzD1mIi4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jENUeY-6QMM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ycpE_rvGnv8" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="swiper-slide category4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OUI5w3AfkGk" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Add Pagination and Navigation controls -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
 <!-- Section End - Material Design Icons -->
 <!-- Section Start - Footer -->
 <section class='footer bg-black padding-bottom-50 '><div class="container">
@@ -213,63 +222,47 @@
         <!-- Text Widget - Start -->
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1" data-effect="fadeInUp">
             <div class="logo">
-                <span>Caliber</span>
+                <span>M-Ideas</span>
             </div>
-            <p>This is a unique & creatively designed layout built in Photoshop with a modern look. All the files are well organized and named as per content. Its very easy to change any part.</p>
+            <p>Turing your digital aspirations into vivid reality</p>
             <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
         </div>
         <!-- Text Widget - End -->
         <!-- Twitter Widget - Start -->
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 twitter-widget inviewport animated delay2" data-effect="fadeInUp">
-            <h4>Twitter</h4>
+            <h4>Instagram</h4>
             <div class="headul left-align"></div>
             <div class="tweet">
-                <i class="mdi mdi-twitter"></i>
-                <div class="message"><strong>@thePixelsTheme</strong> Actually preparing a blog :)  <small>10 minutes ago</small></div>
+                <div class="message"><strong>@m.ideas_official</strong></div>
             </div>
-            <div class="tweet">
+            <!-- <div class="tweet">
                 <i class="mdi mdi-twitter"></i>
                 <div class="message">Inspired by <strong>@mattjohn</strong> #10Bootstrap #vime <small>30 minutes ago</small></div>
             </div>
             <div class="tweet">
                 <i class="mdi mdi-twitter"></i>
                 <div class="message"><strong>@AmazingDesign</strong> Current design trends of a blog <small>1 hour ago</small></div>
-            </div>
+            </div> -->
         </div>
         <!-- Twitter Widget - End -->
-        <!-- Flickr Widget - Start -->
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 flickr-widget inviewport animated delay3" data-effect="fadeInUp">
-            <h4>Flickr</h4>
-            <div class="headul left-align"></div>
-            <div class="row images">
-                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-1.jpg" class="img-responsive"></div>
-                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-2.jpg" class="img-responsive"></div>
-                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-3.jpg" class="img-responsive"></div>
-                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-4.jpg" class="img-responsive"></div>
-                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-5.jpg" class="img-responsive"></div>
-                <div class="col-md-3 col-sm-2 col-xs-4"><img alt="flickr-image" src="img/flickr-6.jpg" class="img-responsive"></div>
-                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-7.jpg" class="img-responsive"></div>
-                <div class="col-md-3 hidden-sm hidden-xs"><img alt="flickr-image" src="img/flickr-8.jpg" class="img-responsive"></div>
-            </div>
-        </div>
-        <!-- Flickr Widget - End -->
+       
     </div>
 </div>
 <!-- Copyright Bar - Start -->
 <div class="copyright">
     <div class="col-md-12">
         <div class="container">
-            <div class="">
+            <div>
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
-                    <span class="">&copy; 2015 CALIBER theme | Made by THEMEPASSION</span>
+                    <span>&copy; 2024 M-Ideas | Ideas Alive</span>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
+                <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
                     <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
                     <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
                     <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
                     <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
                     <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -277,23 +270,31 @@
 <!-- Copyright Bar - End -->
 </section>
 <!-- Section End - Footer -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    function showCategory(category) {
-    var images = document.querySelectorAll('#image-gallery img');
+    var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+});
+
+function showCategory(category) {
+    var slides = document.querySelectorAll('.swiper-slide');
     
     if (category === 'all') {
-        images.forEach(function(img) {
-            img.style.display = 'block';
+        slides.forEach(function(slide) {
+            slide.style.display = 'block';
         });
     } else {
-        images.forEach(function(img) {
-            if (img.classList.contains(category)) {
-                img.style.display = 'block';
+        slides.forEach(function(slide) {
+            if (slide.classList.contains(category)) {
+                slide.style.display = 'block';
             } else {
-                img.style.display = 'none';
+                slide.style.display = 'none';
             }
         });
     }
+    
+    swiper.update();
 }
  </script>
 </body>
