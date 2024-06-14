@@ -21,13 +21,137 @@
         <link rel="icon" href="./img/Mi - Logo.svg">
         <script type="text/javascript" src="js/main.js"></script>
         <style>
-            .swiper-container {
-                width: 80%;
-                height: auto;
-                margin: auto;
+            .filter-categories {
+                text-align: center;
+                margin-bottom: 20px;
             }
-            @media (max-width:500px){
-                .swiper-container .swiper-wrapper .swiper-slide iframe{
+            .filter-categories .btn {
+                margin: 5px;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                padding: 20px;
+            }
+            .grid-item iframe {
+                margin-left: 15%;
+                width: 400px;
+                height: 200px;
+            }
+
+            .grid-item{
+                width: 0;
+            }
+
+            @media (min-width: 320px){
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto;
+                    gap: 45px;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+            @media (min-width: 425px){
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto;
+                    margin-left: 10%;
+                    padding: 10px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+            @media (min-width: 700px){
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto ;
+                    margin-left: 4%;
+                    gap: 45px;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+            @media (min-width: 1000px){
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto auto ;
+                    margin-left: 6%;
+                    width: 90%;
+                    gap: 45px;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+            @media (min-width: 1300px){
+                .grid-container {
+                    display: grid;
+                    margin-left: 7%;
+                    grid-template-columns: auto auto auto ;
+                    width: 90%;
+                    gap: 45px;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+
+            @media (min-width: 1400px){
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto auto auto ;
+                    margin-left: 4%;
+                    gap: 45px;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+
+            @media (min-width: 1600px){
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto ;
+                    gap: 60px;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+
+            @media (min-width: 2550px){
+                .grid-container {
+                    margin-left: 6%;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto auto;
+                    padding: 20px;
+                }
+
+                .grid-container .grid-item iframe{
                     width: 300px;
                     height: 200px;
                 }
@@ -141,13 +265,12 @@
             <div class="maintext">
                 <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
                     <div class="left-line">
-                        <h4>Audio</h4>
-                        <h1>Video</h1>
+                        <h1>Audio</h1>
                     </div>
                 </div>
                 <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
                     <div>
-                        <h1>Content</h1>
+                        <h1 style="margin-top: -0.1%;">Video</h1>
                     </div>
                 </div>
             </div>
@@ -163,53 +286,46 @@
             <button class="btn filter" onclick="showCategory('category1')">2D Animation</button>
             <button class="btn filter" onclick="showCategory('category2')">3D Animation</button>
             <button class="btn filter" onclick="showCategory('category3')">Logo Animation</button>
-            <button class="btn filter" onclick="showCategory('category4')">Coffee Table Books</button>
+            <button class="btn filter" onclick="showCategory('category4')">Coffee Table Book</button>
             <a href="static.html"><span class="btn filter">Static Content</span></a>
         </div>
         
-        <div class="swiper-container">
-            <div class="swiper-wrapper" id="video-gallery">
-                <!-- Repeat for each video with appropriate category classes -->
-                <div class="swiper-slide category3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/V6zLKxYQbpY" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/tvbZ9G4LqmQ" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CBGvsDMNOGE" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category3">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_xlMJDrbSgc" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category2">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DVPnyyxtjaU" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category1">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Rzj3lphFlTo" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category1">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/FFSAL3YTd3o" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category2">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/H2PMLKfpm2M" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category1">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZsusDK_SOiM" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category2">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nY2lzD1mIi4" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category4">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/jENUeY-6QMM" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category4">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ycpE_rvGnv8" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="swiper-slide category4">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OUI5w3AfkGk" frameborder="0" allowfullscreen></iframe>
-                </div>
+        <div class="grid-container" id="video-gallery">
+            <!-- Repeat for each video with appropriate category classes -->
+            <div class="grid-item category3">
+                <iframe src="https://www.youtube.com/embed/V6zLKxYQbpY" frameborder="0" allowfullscreen></iframe>
             </div>
+            <div class="grid-item category3">
+                <iframe src="https://www.youtube.com/embed/tvbZ9G4LqmQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category3">
+                <iframe src="https://www.youtube.com/embed/CBGvsDMNOGE" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category3">
+                <iframe src="https://www.youtube.com/embed/_xlMJDrbSgc" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category2">
+                <iframe src="https://www.youtube.com/embed/DVPnyyxtjaU" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category1">
+                <iframe src="https://www.youtube.com/embed/Rzj3lphFlTo" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category1">
+                <iframe src="https://www.youtube.com/embed/FFSAL3YTd3o" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category2">
+                <iframe src="https://www.youtube.com/embed/H2PMLKfpm2M" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category4">
+                <iframe src="https://www.youtube.com/embed/jENUeY-6QMM" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category4">
+                <iframe src="https://www.youtube.com/embed/ycpE_rvGnv8" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="grid-item category4">
+                <iframe src="https://www.youtube.com/embed/OUI5w3AfkGk" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
             <!-- Add Pagination and Navigation controls -->
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -272,30 +388,23 @@
 <!-- Section End - Footer -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-    var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 10,
-});
-
 function showCategory(category) {
-    var slides = document.querySelectorAll('.swiper-slide');
-    
-    if (category === 'all') {
-        slides.forEach(function(slide) {
-            slide.style.display = 'block';
-        });
-    } else {
-        slides.forEach(function(slide) {
-            if (slide.classList.contains(category)) {
-                slide.style.display = 'block';
+            var items = document.querySelectorAll('.grid-item');
+            
+            if (category === 'all') {
+                items.forEach(function(item) {
+                    item.style.display = 'block';
+                });
             } else {
-                slide.style.display = 'none';
+                items.forEach(function(item) {
+                    if (item.classList.contains(category)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
             }
-        });
-    }
-    
-    swiper.update();
-}
+        }
  </script>
 </body>
 </html>

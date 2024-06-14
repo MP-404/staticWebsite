@@ -1,67 +1,107 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>M - Ideas | Ideas Alive</title>
-        <meta charset="utf-8"/>
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="js/pace.min.js"></script>
-        <link href="css/pace-loading-bar.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/animate.caliber.css">
-        <link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script src="js/jquery.viewportchecker.min.js"></script>
-        <!--Mixitup -->
-        <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-        <!--Fancybox -->
-        <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-        <!-- Main Style -->
-        <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
-        <link rel="icon" href="./img/Mi - Logo.svg">
-        <script type="text/javascript" src="js/main.js"></script>
+<head>
+    <title>M - Ideas | Ideas Alive</title>
+    <meta charset="utf-8"/>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <link href="css/pace-loading-bar.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.caliber.css">
+    <link rel="stylesheet" type="text/css" href="css/materialdesignicons.caliber.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquery.viewportchecker.min.js"></script>
+    <!--Mixitup -->
+    <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+    <!--Fancybox -->
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+    <!-- Main Style -->
+    <link rel="stylesheet" id="main-style" type="text/css" href="css/style.css">
+    <link rel="icon" href="./img/Mi - Logo.svg">
+    <script type="text/javascript" src="js/main.js"></script>
 
-        <style>
-            #category-buttons button {
-                padding: 10px 20px;
-                margin: 5px;
-                cursor: pointer;
-            }
+    <style>
+        #category-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
 
-            #image-gallery {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        #image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-            #image-gallery #big {
-                margin: 10px;
-                max-width: 250px;
-                max-height: 400px;
-            }
-            #image-gallery #small {
-                margin: 10px;
-                max-width: 300px;
-                max-height: 200px;
-            }
-            @media screen and (min-width:500px){
-                #image-gallery #small{
-                    margin-top: 130px;
-                }
-            }
-        </style>
+        #image-gallery img {
+            margin: 10px;
+            width: 20%;
+            height: 20%;
+            cursor: pointer;
+        }
 
-    </head>
-    <body class=" horizontal  yellow">
-        <!-- Section Start - Header -->
-        <section class="header bg-lightgray header-1" >
-            <!-- Menu Top Bar - Start -->
-            <div class="topbar" data-effect="fadeIn">
-                <div class="menu">
-                    <div class="primary inviewport animated delay4" data-effect="fadeInRightBig">
-                        <div class='cssmenu'>
-                            <!-- Menu - Start -->
-                            <ul class='menu-ul'><li class='has-sub'>
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content, #caption {
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @keyframes zoom {
+            from {transform: scale(0)} 
+            to {transform: scale(1)}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="horizontal yellow">
+    <!-- Section Start - Header -->
+    <section class="header bg-lightgray header-1">
+        <!-- Menu Top Bar - Start -->
+        <div class="topbar" data-effect="fadeIn">
+            <div class="menu">
+                <div class="primary inviewport animated delay4" data-effect="fadeInRightBig">
+                    <div class='cssmenu'>
+                        <!-- Menu - Start -->
+                        <ul class='menu-ul'>
+                            <li class='has-sub'>
                                 <a href='index.html'>Home</a>
                             <li class='has-sub'>
                                 <a href='about-us.html'>About Us</a>
@@ -78,7 +118,6 @@
                                 </ul>
                             </li>
                         </ul>
-                        
                         <!-- Menu - End -->
                     </div>
                 </div>
@@ -86,214 +125,209 @@
                     <div class='cssmenu'>
                         <!-- Menu - Start -->
                         <ul class='menu-ul'>
-                        <li class='has-sub'>
-                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
-                            <ul>
-                                <li>
-                                    <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
-                                </li>
-                                <li>
-                                    <a class="link" href='solution.html#Content Production'>Content Production</a>
-                                </li>
-                                <li>
-                                    <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
-                                </li>
-                                <li>
-                                    <a class="link" href='solution.html#Media Design'>Media Design</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class='has-sub'>
-                            <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
-                            <ul>
-                                <li>
-                                    <a href='blogs.html'>Blogs</a>
-                                </li>
-                                <li>
-                                    <a href='news.html' >News</a>
-                                </li>
-                                <li>
-                                    <a href='testimonials.html' >Testimonials</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class='has-sub'>
-                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
-                            <ul>
-                                <li>
-                                    <a href='careers.html'>Careers</a>
-                                </li>
-                                <li>
-                                    <a href='getintouch.html'>Get in Touch</a>
-                                </li>
-                            </ul>
-                        </li> 
-                    </ul>
-                    <!-- Menu - End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Menu Top Bar - End -->
-    <!-- Logo and Mobile Menu - Start -->
-    <div class='header-logo-wrap'>
-        <div class="container">
-            <div class="logo col-xs-2">
-                <a href="index.html"><img src="./assets2/img/Logo-animation-_GIF_v3.gif" alt="M-ideas" style="height: 80px;"></a>
-            </div>
-            <div class="menu-mobile col-xs-10 pull-right cssmenu">
-                <i class="mdi mdi-menu menu-toggle"></i>
-                <ul class="menu" id='parallax-mobile-menu'>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- Logo and Mobile Menu - End -->
-    <!-- Header Slide - Start -->
-    <div class="header-slide" style="position:relative;">
-        <img alt="header-banner-image" src="img/banner-3.jpg" class='header-img'>
-        <div class="overlay overlaysmall3">
-            <div class="black inviewport animated delay4" data-effect="fadeInLeftOpacity"></div>
-            <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
-            <!-- Header Text - Start -->
-            <div class="maintext">
-                <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
-                    <div class="left-line">
-                        <h1>Static</h1>
+                            <li class='has-sub'>
+                                <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                                <ul>
+                                    <li>
+                                        <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
+                                    </li>
+                                    <li>
+                                        <a class="link" href='solution.html#Content Production'>Content Production</a>
+                                    </li>
+                                    <li>
+                                        <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
+                                    </li>
+                                    <li>
+                                        <a class="link" href='solution.html#Media Design'>Media Design</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'>
+                                <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                                <ul>
+                                    <li>
+                                        <a href='blogs.html'>Blogs</a>
+                                    </li>
+                                    <li>
+                                        <a href='news.html'>News</a>
+                                    </li>
+                                    <li>
+                                        <a href='testimonials.html'>Testimonials</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub'>
+                                <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                                <ul>
+                                    <li>
+                                        <a href='careers.html'>Careers</a>
+                                    </li>
+                                    <li>
+                                        <a href='getintouch.html'>Get in Touch</a>
+                                    </li>
+                                </ul>
+                            </li> 
+                        </ul>
+                        <!-- Menu - End -->
                     </div>
                 </div>
-                <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
+            </div>
+        </div>
+        <!-- Menu Top Bar - End -->
+        <!-- Logo and Mobile Menu - Start -->
+        <div class='header-logo-wrap'>
+            <div class="container">
+                <div class="logo col-xs-2">
+                    <a href="index.html"><img src="./assets2/img/Logo-animation-_GIF_v3.gif" alt="M-ideas" style="height: 80px;"></a>
+                </div>
+                <div class="menu-mobile col-xs-10 pull-right cssmenu">
+                    <i class="mdi mdi-menu menu-toggle"></i>
+                    <ul class="menu" id='parallax-mobile-menu'></ul>
+                </div>
+            </div>
+        </div>
+        <!-- Logo and Mobile Menu - End -->
+        <!-- Header Slide - Start -->
+        <div class="header-slide" style="position:relative;">
+            <img alt="header-banner-image" src="img/banner-3.jpg" class='header-img'>
+            <div class="overlay overlaysmall3">
+                <div class="black inviewport animated delay4" data-effect="fadeInLeftOpacity"></div>
+                <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
+                <!-- Header Text - Start -->
+                <div class="maintext">
+                    <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
+                        <div class="left-line">
+                            <h1>Sta</h1>
+                        </div>
+                    </div>
+                    <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
+                        <div>
+                            <h1 style="margin-top: -0.1%;">tic</h1>
+                        </div>
+                    </div>
+                </div>
+                <!-- Header Text - End -->
+            </div>
+        </div>
+        <!-- Header Slide - End -->
+    </section>
+    <!-- Section End - Header -->
+    <!-- Section Start - Material Design Icons -->
+    <section>
+        <div class="filter-categories filter-mixitup">
+            <button class="btn filter" onclick="showCategory('all')">All</button>
+            <button class="btn filter" onclick="showCategory('category1')">App Collaterals</button>
+            <button class="btn filter" onclick="showCategory('category2')">Events</button>
+            <button class="btn filter" onclick="showCategory('category3')">Communication Mailers</button>
+            <button class="btn filter" onclick="showCategory('category4')">Social Media Content</button>
+            <a href="audiovideo.html"><span class="btn filter">Audio & Video Content</span></a>
+        </div>
+        
+        <div id="image-gallery">
+            <img id="small" src="./img/Mockup/1.jpg" class="category2" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/2.jpg" class="category3" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/3.jpg" class="category3" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/4.jpg" class="category1" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/5.jpg" class="category1" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/6.jpg" class="category1" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/7.jpg" class="category4" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/8.jpg" class="category2" onclick="showModal(this)">
+            <img id="small" src="./img/Mockup/9.jpg" class="category2" onclick="showModal(this)">
+        </div>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <!-- Section End - Material Design Icons -->
+    <!-- Section Start - Footer -->
+    <section class='footer bg-black padding-bottom-50 '>
+        <div class="container">
+            <div class="row">
+                <!-- Text Widget - Start -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1" data-effect="fadeInUp">
+                    <div class="logo">
+                        <span>M-Ideas</span>
+                    </div>
+                    <p>Turing your digital aspirations into vivid reality</p>
+                    <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
+                </div>
+                <!-- Text Widget - End -->
+                <!-- Twitter Widget - Start -->
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 twitter-widget inviewport animated delay2" data-effect="fadeInUp">
+                    <h4>Instagram</h4>
+                    <div class="headul left-align"></div>
+                    <div class="tweet">
+                        <div class="message"><strong>@m.ideas_official</strong></div>
+                    </div>
+                    <!-- <div class="tweet">
+                        <i class="mdi mdi-twitter"></i>
+                        <div class="message">Inspired by <strong>@mattjohn</strong> #10Bootstrap #vime <small>30 minutes ago</small></div>
+                    </div>
+                    <div class="tweet">
+                        <i class="mdi mdi-twitter"></i>
+                        <div class="message"><strong>@AmazingDesign</strong> Current design trends of a blog <small>1 hour ago</small></div>
+                    </div> -->
+                </div>
+                <!-- Twitter Widget - End -->
+            </div>
+        </div>
+        <!-- Copyright Bar - Start -->
+        <div class="copyright">
+            <div class="col-md-12">
+                <div class="container">
                     <div>
-                        <h1 style="margin-top: -0.1%;">Content</h1>
+                        <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
+                            <span>&copy; 2024 M-Ideas | Ideas Alive</span>
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
+                            <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
+                            <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
+                            <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
+                            <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
+                            <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
+                        </div> -->
                     </div>
                 </div>
             </div>
-            <!-- Header Text - End -->
         </div>
-    </div>
-    <!-- Header Slide - End -->
-</section>
-<!-- Section End - Header -->
-<!-- Section Start - Material Design Icons -->
+        <!-- Copyright Bar - End -->
+    </section>
+    <!-- Section End - Footer -->
 
-<section>
-    <div class="filter-categories filter-mixitup">
-        <button class="btn filter" onclick="showCategory('all')">All</button>
-        <button class="btn filter" onclick="showCategory('category1')">App Collaterals</button>
-        <button class="btn filter" onclick="showCategory('category2')">Events</button>
-        <button class="btn filter" onclick="showCategory('category3')">Communication Mailers</button>
-        <button class="btn filter" onclick="showCategory('category4')">Social Media Content</button>
-        <a href="audiovideo.html"><span class="btn filter">Audio & Video Content</span></a>
-    </div>
-    
-    <div id="image-gallery">
-        <img id="big" src="./img/Playlist/AV.jpg">
-        <img id="big" src="./img/Playlist/mailer- (1).jpg" class="category3">
-        <img id="big" src="./img/Playlist/mailer- (11).jpg" class="category3">
-        <img id="big" src="./img/Playlist/mailer- (14).jpg" class="category3">
-        <img id="big" src="./img/Playlist/Photo mockup-04.png" class="category2">
-        <img id="big" src="./img/Playlist/Picture4.png" class="category4">
-        <img id="big" src="./img/Playlist/Table Tent Card.jpg" class="category3">
-        <img id="big" src="./img/Playlist/Yes Bank _PREMIA_Creative_3.jpg" class="category3">
-        <img id="big" src="./img/Playlist/Picture8.jpg">
-        <img id="big" src="./img/Playlist/Picture9.jpg">
-        <img id="big" src="./img/Playlist/Picture10.jpg">
-        <img id="small" src="./img/Playlist/Picture5.png" class="category4">
-        <img id="small" src="./img/Playlist/Rourkela-15.png" class="category2">
-        <img id="small" src="./img/Playlist/Rourkela-16.png" class="category2">
-        <img id="small" src="./img/Playlist/Rourkela-18.png" class="category2">
-        <img id="small" src="./img/Playlist/Rourkela-19.png" class="category2">
-        <img id="small" src="./img/Playlist/Rourkela-20.png" class="category2">
-        <img id="small" src="./img/Playlist/Rourkela-14.png" class="category2">
-        <img id="small" src="./img/Playlist/Photo mockup-05.png" class="category2">
-        <img id="small" src="./img/Playlist/Photo mockup-06.png" class="category2">
-        <img id="small" src="./img/Playlist/Photo mockup-07.png" class="category2">
-        <img id="small" src="./img/Playlist/Siddhi app Intro.jpg" class="category1">
-        <img id="small" src="./img/Playlist/Picture1.png" class="category1">
-        <img id="small" src="./img/Playlist/Picture2.png" class="category1">
-        <img id="small" src="./img/Playlist/Picture3.png" class="category4">
-        <img id="small" src="./img/Playlist/mailer- (16).jpg" class="category3">
-        <img id="small" src="./img/Playlist/maxresdefault.jpg" class="category2">
-        <img id="small" src="./img/Playlist/Photo mockup-02.png" class="category2">
-        <img id="small" src="./img/Playlist/Photo mockup-03.png" class="category2">
-        <img id="small" src="./img/Playlist/mailer- (3).jpg" class="category3">
-        <img id="small" src="./img/Playlist/mailer- (5).jpg" class="category3">
-    </div>
-</section>
-
-<!-- Section End - Material Design Icons -->
-<!-- Section Start - Footer -->
-<section class='footer bg-black padding-bottom-50 '><div class="container">
-    <div class="row">
-        <!-- Text Widget - Start -->
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-widget inviewport animated delay1" data-effect="fadeInUp">
-            <div class="logo">
-                <span>M-Ideas</span>
-            </div>
-            <p>Turing your digital aspirations into vivid reality</p>
-            <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
-        </div>
-        <!-- Text Widget - End -->
-        <!-- Twitter Widget - Start -->
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 twitter-widget inviewport animated delay2" data-effect="fadeInUp">
-            <h4>Instagram</h4>
-            <div class="headul left-align"></div>
-            <div class="tweet">
-                <div class="message"><strong>@m.ideas_official</strong></div>
-            </div>
-            <!-- <div class="tweet">
-                <i class="mdi mdi-twitter"></i>
-                <div class="message">Inspired by <strong>@mattjohn</strong> #10Bootstrap #vime <small>30 minutes ago</small></div>
-            </div>
-            <div class="tweet">
-                <i class="mdi mdi-twitter"></i>
-                <div class="message"><strong>@AmazingDesign</strong> Current design trends of a blog <small>1 hour ago</small></div>
-            </div> -->
-        </div>
-        <!-- Twitter Widget - End -->
-       
-    </div>
-</div>
-<!-- Copyright Bar - Start -->
-<div class="copyright">
-    <div class="col-md-12">
-        <div class="container">
-            <div>
-                <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
-                    <span>&copy; 2024 M-Ideas | Ideas Alive</span>
-                </div>
-                <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
-                    <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
-                </div> -->
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Copyright Bar - End -->
-</section>
-<!-- Section End - Footer -->
-<script>
-    function showCategory(category) {
-    var images = document.querySelectorAll('#image-gallery img');
-    
-    if (category === 'all') {
-        images.forEach(function(img) {
-            img.style.display = 'block';
-        });
-    } else {
-        images.forEach(function(img) {
-            if (img.classList.contains(category)) {
-                img.style.display = 'block';
+    <script>
+        function showCategory(category) {
+            var images = document.querySelectorAll('#image-gallery img');
+            
+            if (category === 'all') {
+                images.forEach(function(img) {
+                    img.style.display = 'block';
+                });
             } else {
-                img.style.display = 'none';
+                images.forEach(function(img) {
+                    if (img.classList.contains(category)) {
+                        img.style.display = 'block';
+                    } else {
+                        img.style.display = 'none';
+                    }
+                });
             }
-        });
-    }
-}
- </script>
+        }
+
+        function showModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
