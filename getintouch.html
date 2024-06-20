@@ -21,81 +21,8 @@
         <link rel="icon" href="./img/Mi - Logo.svg">
         <script type="text/javascript" src="js/main.js"></script>
         <style>
-            @media (min-width: 300px) and (max-width:500px) {
-                section.header .maintext .black-text div{
-                    margin-top: 40%;
-                }
-            }
-            @media (max-width: 600px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 25%;
-                }
-            }
-
-            @media only screen and (min-width:600px) {
-                section.header .maintext .black-text div{
-                    margin-top: 23%;
-                }
-            }
-
-            @media only screen and (min-width:768px) {
-                section.header .maintext .black-text div{
-                    margin-top: 22%;
-                }
-            }
-
-            @media  only screen and (min-width: 992px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 25%;
-                }
-            }
-            @media  only screen and (min-width: 1250px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 25%;
-                }
-            
-            }
-
-            @media  only screen and (min-width: 1400px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 22%;
-                }
-            }
-
-            @media  only screen and (min-width: 1500px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 20%;
-                }
-            }
-
-            @media  only screen and (min-width: 1700px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 20%;
-                }
-            }
-
-            @media  only screen and (min-width: 1900px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 18%;
-                }
-            }
-
-            @media  only screen and (min-width: 2500px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 14%;
-                }
-            }
-
-            @media  only screen and (min-width: 3800px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 11%;
-                }
-            }
-
-            @media  only screen and (min-width: 5000px)  {
-                section.header .maintext .black-text div{
-                    margin-top: 9%;
-                }
+            #ds-li:hover{
+                background-color: rgb(100, 100, 100);
             }
 
             @media (min-width: 300px) and (max-width:600px){
@@ -117,6 +44,20 @@
                     width: 100%;
                 }
             }
+
+            @media (min-width:300px) and (max-width: 500px){
+                section.header .maintext .primary-text h1, section.header .maintext .black-text h1{
+                    font-size: 25px;
+                }
+
+                section.header .maintext .primary-text h1{
+                    margin-left: 3%;
+                }
+
+                section.header .maintext .black-text h1{
+                    margin-left: -4%;
+                }
+            }
         </style>
     </head>
     <body class=" horizontal  yellow">
@@ -134,13 +75,16 @@
                                 <a href='about-us.html'>About Us</a>
                             </li>
                             <li class='has-sub'>
+                                <!---
                                 <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                                -->
+                                <a >Portfolio <i class='mdi mdi-chevron-down'></i></a>
                                 <ul>
                                     <li>
-                                        <a href='audiovideo.html'>Audio & Video Content</a>
+                                        <a href='audiovideo.html' id="ds-li">Audio & Video Content</a>
                                     </li>
                                     <li>
-                                        <a href='static.html'>Static Content</a>
+                                        <a href='static.html' id="ds-li">Static Content</a>
                                     </li>
                                 </ul>
                             </li>
@@ -154,44 +98,53 @@
                         <!-- Menu - Start -->
                         <ul class='menu-ul'>
                         <li class='has-sub'>
+                            <!---
+                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                            -->
                             <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
-                                    <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
+                                    <a class="link" href='solution.html#Design & Strategy' id="ds-li">Design & Strategy</a>
                                 </li>
                                 <li>
-                                    <a class="link" href='solution.html#Content Production'>Content Production</a>
+                                    <a class="link" href='solution.html#Content Production' id="ds-li">Content Production</a>
                                 </li>
                                 <li>
-                                    <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
+                                    <a class="link" href='solution.html#Digital Marketing' id="ds-li">Digital Marketing</a>
                                 </li>
                                 <li>
-                                    <a class="link" href='solution.html#Media Design'>Media Design</a>
+                                    <a class="link" href='solution.html#Media Design' id="ds-li">Media Design</a>
                                 </li>
                             </ul>
                         </li>
                         <li class='has-sub'>
+                            <!---
                             <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                            -->
+                            <a>Media <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
-                                    <a href='blogs.html'>Blogs</a>
+                                    <a href='blogs.html' id="ds-li">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href='news.html' >News</a>
+                                    <a href='news.html'id="ds-li" >News</a>
                                 </li>
                                 <li>
-                                    <a href='testimonials.html' >Testimonials</a>
+                                    <a href='testimonials.html' id="ds-li">Testimonials</a>
                                 </li>
                             </ul>
                         </li>
                         <li class='has-sub'>
-                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            <!---
+                                <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            -->
+                            <a>Contact <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
-                                    <a href='careers.html'>Careers</a>
+                                    <a href='careers.html' id="ds-li">Careers</a>
                                 </li>
                                 <li>
-                                    <a href='getintouch.html'>Get in Touch</a>
+                                    <a href='getintouch.html' id="ds-li">Get in Touch</a>
                                 </li>
                             </ul>
                         </li> 
@@ -226,14 +179,12 @@
             <div class="maintext">
                 <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
                     <div class="left-line">
-                        <h1>Questions</h1>
-                        <h1 style="margin-left: 87%; margin-top: 5%;">o</h1>
+                        <h1>Questions O</h1>
                     </div>
                 </div>
                 <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
                     <div>
-                        <h1 style="margin-top: -3.5%;">r</h1>
-                        <h1 style="margin-top: 2.6%;">feedback?</h1>
+                        <h1 style="margin-top: -0.1%;">R feedback?</h1>
                     </div>
                 </div>
             </div>

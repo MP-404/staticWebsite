@@ -21,7 +21,11 @@
         <link rel="icon" href="./img/Mi - Logo.svg">
         <script type="text/javascript" src="js/main.js"></script>
         <style>
-            #typed-text {
+            #ds-li:hover{
+                background-color: rgb(100, 100, 100);
+            }
+
+            /* #typed-text {
                 font-size: 24px;
                 border-right: .1em solid black;
                 white-space: nowrap;
@@ -40,8 +44,84 @@
 
             #typed-text {
                 animation: typing 4s steps(50, end), blink .75s step-end infinite;
+            } */
+
+            @media (min-width: 320px) and (max-width: 5900px){
+                .type {
+                display:inline-block;
+                }
+                .type > span {
+                display:grid;
+                overflow: hidden;
+                height:1.5em;
+                }
+                .type span span {
+                width:0%;
+                max-width:max-content;
+                overflow: hidden;
+                height:inherit;
+                word-break:break-all;
+                animation:
+                    c 0.5s infinite steps(1),  
+                    t 2s ease-in-out infinite alternate,
+                    m 12s steps(3) infinite;
+                }
+                .type span span:before {
+                content:" ";
+                display:inline-block;
+                }
+                @keyframes t{
+                90%,100% {width:100%}
+                }
+                @keyframes c{
+                0%,100%{box-shadow:5px 0 0 #0000}
+                50%    {box-shadow:0px 0 0 red  }
+                }
+                @keyframes m{
+                100% {transform:translateY(-300%)}
+                }
             }
 
+            @media (min-width: 320px){
+                section .heading.left-align{
+                    font-size: 22px; 
+                    line-height: 1.2;
+                }
+            }
+
+            @media (min-width: 375px){
+                section .heading.left-align{
+                    font-size: 27px; 
+                    line-height: 1.2;
+                }
+            }
+            @media (min-width: 425px){
+                section .heading.left-align{
+                    font-size: 30px; 
+                    line-height: 1.2;
+                }
+            }
+
+            @media (min-width: 768px){
+                section .heading.left-align{
+                    font-size: 55px; 
+                    line-height: 1.2;
+                }
+            }
+
+            @media (min-width: 1024px){
+                section .heading.left-align{
+                    font-size: 37px; 
+                    line-height: 1.2;
+                }
+            }
+
+            @media (max-width: 1440px){
+                section .heading.left-align h1{
+                    font-size: 52px; 
+                    line-height: 1.2;
+                }
+            }
             /*OUR TEAM*/
             .body {
             margin: 0;
@@ -80,7 +160,7 @@
         }
 
         .details::after {
-            content: attr(data-name) " - " attr(data-designation);
+            content: attr(data-name) " - "attr(data-designation);
             position: absolute;
             bottom: 0;
             left: 0;
@@ -94,12 +174,23 @@
         }
 
         .details.active {
-            width: 1000%;
+            width: 600%;
         }
 
         .details.active::after {
             display: block;
         }
+
+        @media (min-width: 320px) and (max-width: 500px){
+            .body{
+                margin-top: -35%;
+                margin-bottom: -50%;
+            }
+
+            .image-container {
+                height: 300px;
+        }
+    }
         </style>
        
     </head>
@@ -118,13 +209,16 @@
                                 <a href='about-us.html'>About Us</a>
                             </li>
                             <li class='has-sub'>
+                                <!---
                                 <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                                -->
+                                <a >Portfolio <i class='mdi mdi-chevron-down'></i></a>
                                 <ul>
                                     <li>
-                                        <a href='audiovideo.html'>Audio & Video Content</a>
+                                        <a href='audiovideo.html' id="ds-li">Audio & Video Content</a>
                                     </li>
                                     <li>
-                                        <a href='static.html'>Static Content</a>
+                                        <a href='static.html' id="ds-li">Static Content</a>
                                     </li>
                                 </ul>
                             </li>
@@ -138,44 +232,53 @@
                         <!-- Menu - Start -->
                         <ul class='menu-ul'>
                         <li class='has-sub'>
+                            <!---
+                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                            -->
                             <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
-                                    <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
+                                    <a class="link" href='solution.html#Design & Strategy' id="ds-li">Design & Strategy</a>
                                 </li>
                                 <li>
-                                    <a class="link" href='solution.html#Content Production'>Content Production</a>
+                                    <a class="link" href='solution.html#Content Production' id="ds-li">Content Production</a>
                                 </li>
                                 <li>
-                                    <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
+                                    <a class="link" href='solution.html#Digital Marketing' id="ds-li">Digital Marketing</a>
                                 </li>
                                 <li>
-                                    <a class="link" href='solution.html#Media Design'>Media Design</a>
+                                    <a class="link" href='solution.html#Media Design' id="ds-li">Media Design</a>
                                 </li>
                             </ul>
                         </li>
                         <li class='has-sub'>
+                            <!---
                             <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                            -->
+                            <a>Media <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
-                                    <a href='blogs.html'>Blogs</a>
+                                    <a href='blogs.html' id="ds-li">Blogs</a>
                                 </li>
                                 <li>
-                                    <a href='news.html' >News</a>
+                                    <a href='news.html'id="ds-li" >News</a>
                                 </li>
                                 <li>
-                                    <a href='testimonials.html' >Testimonials</a>
+                                    <a href='testimonials.html' id="ds-li">Testimonials</a>
                                 </li>
                             </ul>
                         </li>
                         <li class='has-sub'>
-                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            <!---
+                                <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                            -->
+                            <a>Contact <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
-                                    <a href='careers.html'>Careers</a>
+                                    <a href='careers.html' id="ds-li">Careers</a>
                                 </li>
                                 <li>
-                                    <a href='getintouch.html'>Get in Touch</a>
+                                    <a href='getintouch.html' id="ds-li">Get in Touch</a>
                                 </li>
                             </ul>
                         </li> 
@@ -208,16 +311,15 @@
             <div class="primary inviewport animated delay4" data-effect="fadeInRightOpacity"></div>
             <!-- Header Text - Start -->
             <div class="maintext">
-                <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
-                    <div class="left-line">
-                        <h4>Unlocking</h4>
-                        <h1>Tomorrow,</h1>
-                    </div>
+            <div class="primary-text inviewport animated delay4" data-effect="fadeInRightBig">
+                <div class="left-line">
+                    <h4>Unlocking</h4>
+                    <h1>Tommorow,</h1>
                 </div>
-                <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
-                    <div>
-                        <h1>Today!</h1>
-                    </div>
+            </div>
+            <div class="black-text inviewport animated delay4" data-effect="fadeInLeftBig">
+                <div>
+                    <h1>Today</h1>
                 </div>
             </div>
             <!-- Header Text - End -->
@@ -227,7 +329,8 @@
 </section>
 <!-- Section End - Header -->
 <!-- Section Start - Elegant Design -->
-<section ><div class="container">
+<section >
+    <div class="container">
     <div class="row">
         <!-- Mobile Screens - Start -->
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 screen-area hidden-sm hidden-xs">
@@ -239,7 +342,7 @@
         <!-- Mobile Screens - End -->
         <!-- Elegant Text - Start -->
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-area">
-            <h1 class="heading left-align" style="font-size: 45px; line-height: 1.2;">An<br>integrated&nbsp;marketing<br>solutions&nbsp;company</h1>
+            <h1 class="heading left-align">An<br>integrated&nbsp;marketing<br>solutions&nbsp;company</h1>
             <div class="headul left-align"></div>
             <p>Backed with the experience of years our team has mastered the art and science of quality
                 creative solutions ranging from graphic design to multimedia, from competition analysis to
@@ -263,73 +366,96 @@
 </div></section>
 <!-- Section End - Elegant Design -->
 <!-- Section Start - Why Choose Us -->
-<section class='section-features bg-primary max-width-100'>
+<section id="why-choose-us" class='section-features bg-primary max-width-100'>
     <div class="container">
-        <div class="row"style="margin-top: -5%; margin-bottom: -8%;">
+        <div class="row" style="margin-top: -5%; margin-bottom: -8%;">
             <h1 class="heading" style="color: black;">Why Choose Us?</h1>
             <div class="headul"></div>
             <div class="text-typing"> 
-                <h2 class="subheading" id="typed-text" style="color: black;"></h2> 
+                <h2 class="subheading" style="color: black;">Because We Craft &nbsp;
+                    <span class="type">
+                        <span>
+                            <span style="margin-left: 0%;"><em>Innovative Ideas</em></span>
+                            <span style="margin-left: 0%;"><em>Stunning Designs</em></span>
+                            <span style="margin-left: 0%;"><em>Engaging Campaigns!</em></span>
+                        </span>
+                    </span>
+                </h2> 
             </div> 
         </div>
     </div>
 </section>
+
+<!-- <section class='section-features bg-primary max-width-100'>
+    <div class="container">
+        <div class="row"  style="margin-top: -5%; margin-bottom: -8%;">
+            <div class="text-typing"> 
+                <h2 class="subheading" id="typed-text" style="color: black;"></h2>
+            </div> 
+        </div>
+    </div>
+</section> -->
+
 <!-- Section End - Why Choose Us -->
 <!-- Section Start - Meet Our Team -->
 <section id='team'>
     <div class="container">
     <div class="row">
         <h1 class="heading">Meet Our Team</h1>
-        <div class="headul">
-        </div>
- <section class="body" style="margin-top: -15%; margin-bottom: -18%;">
+        <div class="headul"></div>
+ <section class="body">
     <div class="image-container">
-        <div class="details" data-name="Aditya Bhadauriya" data-designation="">
+        <div class="details" data-name="Aditya Bhadauriya" data-designation="IT Wale">
             <img class="img-of-team" src="./img/TEAM/1.jpg" alt="Aditya Bhaduriya">
         </div>
-        <div class="details" data-name="Mohmmad Ali Shaikh" data-designation="">
+        <div class="details" data-name="Mohmmad Ali Shaikh" data-designation="Not a graphics designer">
             <img class="img-of-team" src="./img/TEAM/2.jpg" alt="Mohmmad Ali Shaikh">
         </div>
-        <div class="details" data-name="Aman Upadhyay" data-designation="">
+        <div class="details" data-name="Aman Upadhyay" data-designation="No Comments">
             <img class="img-of-team" src="./img/TEAM/3.jpg" alt="Aman Upadhyay">
         </div>
-        <div class="details" data-name="Ayush Lohani" data-designation="">
+        <div class="details" data-name="Ayush Lohani" data-designation="Don't talk">
             <img class="img-of-team" src="./img/TEAM/4.jpg" alt="Ayush Lohani">
         </div>
-        <div class="details" data-name="Bharat Yadav" data-designation="">
+        <div class="details" data-name="Bharat Yadav" data-designation="First in first out">
             <img class="img-of-team" src="./img/TEAM/5.jpg" alt="Bharat Yadav">
         </div>
-        <div class="details" data-name="Bhupendra Varshney" data-designation="">
+        <div class="details" data-name="Bhupendra Varshney" data-designation="Full stack Magician">
             <img class="img-of-team" src="./img/TEAM/6.jpg" alt="Bhupendra Varshney">
         </div>
-        <div class="details" data-name="Darshana Chavan" data-designation="">
+        <div class="details" data-name="Darshana Chavan" data-designation="Lets Laugh">
             <img class="img-of-team" src="./img/TEAM/7.jpg" alt="Darshana Chavan">
         </div>
-        <div class="details" data-name="Divesh Sharma" data-designation="">
+        <div class="details" data-name="Divesh Sharma" data-designation="Design King">
             <img class="img-of-team" src="./img/TEAM/8.jpg" alt="Divesh Sharma">
         </div>
-        <div class="details" data-name="Satyananda Behera" data-designation="">
+        <div class="details" data-name="Satyananda Behera" data-designation="Serious Person">
             <img class="img-of-team" src="./img/TEAM/9.jpg" alt="Satyananda Behera">
         </div>
-        <div class="details" data-name="Nixon Marvi" data-designation="">
+        <div class="details" data-name="Nixon Marvi" data-designation="Senior Person">
             <img class="img-of-team" src="./img/TEAM/11.jpg" alt="Nixon Marvi">
         </div>
-        <div class="details" data-name="Rahul Bhalekar" data-designation="">
+        <div class="details" data-name="Rahul Bhalekar" data-designation="Focusing">
             <img class="img-of-team" src="./img/TEAM/13.jpg" alt="Rahul Bhalekar">
         </div>
-        <div class="details" data-name="Sakshi Upadhyay" data-designation="">
+        <div class="details" data-name="Sakshi Upadhyay" data-designation="Lady Don">
             <img class="img-of-team" src="./img/TEAM/14.jpg" alt="Sakshi Upadhyay">
         </div>
-        <div class="details" data-name="Shyamli Mishra" data-designation="">
+        <div class="details" data-name="Shyamli Mishra" data-designation="Kaafi Writer">
             <img class="img-of-team" src="./img/TEAM/15.jpg" alt="Shyamli Mishra">
+        </div>
+        <div class="details" data-name="Yashika Sharma" data-designation="Jimmedar Nagrik">
+            <img class="img-of-team" src="./img/TEAM/Yashika.jpg" alt="Yashika Sharma">
+        </div>
+        <div class="details" data-name="Preeti Gill" data-designation="Avid Learner">
+            <img class="img-of-team" src="./img/TEAM/Preti.jpg" alt="Preeti Gill">
         </div>
     </div>
  </section>
 </div>
 </div>
 </section>
-<!-- Section End - Meet Our Team -->
-
+    <!-- Section End - Meet Our Team -->
 <!-- Section Start - Footer -->
 <section class='footer bg-black padding-bottom-50 '><div class="container">
     <div class="row">
@@ -370,36 +496,34 @@
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
                     <span>&copy; 2024 M-Ideas | Ideas Alive</span>
                 </div>
-                <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
-                    <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
-                </div> -->
+                <div class="col-lg-6 col-md-6" style="height: 10px; padding-top: 10px;" >
+                    <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-05.svg" alt="facebook"> </a>
+                    <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-06.svg" alt="instagram"> </a>
+                    <a href="https://www.linkedin.com/company/m-ideasideasalive/posts/?feedView=all"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-07.svg" alt="linkedin"> </a>
+                    <a href="https://www.youtube.com/@m-ideas1467"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-03.svg" alt="Youtube"> </a>
+                    <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-11.svg" alt="x"> </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
 <!-- Copyright Bar - End -->
-</section>
-<!-- Section End - Footer -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var text = "Because We Craft Innovative Strategies, Stunning Designs, and Engaging Campaigns!";
-    var delay = 100; // Delay in milliseconds
-    var index = 0;
-    var element = document.getElementById("typed-text");
-    function type() {
-        if (index < text.length) {
-            element.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, delay);
-        }
-    }
+//     document.addEventListener("DOMContentLoaded", function() {
+//     var text = "Because We Craft Innovative Strategies, Stunning Designs, and Engaging Campaigns!";
+//     var delay = 100; // Delay in milliseconds
+//     var index = 0;
+//     var element = document.getElementById("typed-text");
+//     function type() {
+//         if (index < text.length) {
+//             element.innerHTML += text.charAt(index);
+//             index++;
+//             setTimeout(type, delay);
+//         }
+//     }
 
-    type();
-});
+//     type();
+// });
 
 
 const images = document.querySelectorAll(".img-of-team");

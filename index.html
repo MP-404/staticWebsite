@@ -28,8 +28,8 @@
         <link rel="icon" href="./img/Mi - Logo.svg">
         <script type="text/javascript" src="js/main.js"></script>
         <style>
-            .slider {
-        padding: 40px 0;
+        .slider {
+            padding: 40px 0;
         }
     
         .slider .slide {
@@ -187,47 +187,6 @@
         .slider .slide.raymond:before {
             background: url("./img/all_logos/Logos_bnw/Logos-Grey---2_0067_Logos-Color_0000_Raymond.png") no-repeat;
         }
-        
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-    
-        .swiper-slide {
-            display: grid;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .card {
-            margin-left: 15%;
-            width: 80%;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        
-        .card img {
-            width: 50px;
-            height: 50px;
-            margin-bottom: 20px;
-        }
-        
-        .card h3 {
-            margin-bottom: 10px;
-        }
-        
-        .card p {
-            color: #666;
-        }
-
-        .card a{
-            text-decoration: none;
-        }
-        #ds-li:hover{
-            background-color: rgb(100, 100, 100);
-        }
-
 
         /* style for slider 2*/
 
@@ -365,7 +324,7 @@
             background: url("./img/all_logos/Logos_bnw/Logos-Grey---2_0037_PROBUS.png") no-repeat;
         }
         .slider1 .slide1.bajaj_cap:before {
-            background: url("./img/all_logos/Logos_bnw/Logos-Grey---2_0019_BAJAJ-CAPITAL.png") no-repeat;
+            background: url("./img/all_logos/Logos_bnw/bajaj-capital\ -\ Grey.png") no-repeat;
         }
         .slider1 .slide1.basf:before {
             background: url("./img/all_logos/Logos_bnw/Logos-Grey---2_0018_BASF.png") no-repeat;
@@ -428,12 +387,13 @@
         }.slider1 .slide1.hitachi:before {
             background: url("./img/all_logos/Logos_bnw/Logos-Grey---2_0068_Hitachi-Color.png") no-repeat;
         }
+        
         .swiper-container {
             width: 100%;
             height: 100%;
         }
     
-        .swiper-slide1 {
+        .swiper-slide {
             display: grid;
             justify-content: center;
             align-items: center;
@@ -467,6 +427,132 @@
         #ds-li:hover{
             background-color: rgb(100, 100, 100);
         }
+
+        @media (max-width: 400px){
+            .card{
+                margin-left: 10%;
+            }
+        }
+
+        @media (max-width: 768px){
+            .card{
+                margin-left: 10%;
+            }
+        }
+        
+        @media (min-width:300px) and (max-width: 500px){
+            .quote{
+                margin-top: -15%;
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width:900px) and (max-width: 5000px){
+            .quote{
+                font-size: 25px;
+            }
+        }
+
+        @media (min-width:300px) and (max-width: 500px){
+                section.header .maintext .primary-text h1{
+                    margin-left: 2%;
+                }
+
+                section.header .maintext .black-text h1{
+                    margin-left: -2%;
+                }
+            }
+
+            @media (min-width:300px) and (max-width: 500px){
+                .solutions{
+                    margin-top: 15%;
+                    margin-bottom: 15%;
+                }
+            }
+
+            @media (min-width:600px) and (max-width: 1000px){
+                .solutions{
+                    margin-top: 15%;
+                    margin-bottom: 15%;
+                }
+            }
+
+            @media (min-width: 1200px){
+                .solutions{
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                }
+            }
+
+            @media (min-width:300px) and (max-width: 500px){
+                #clients{
+                    margin-bottom: 25%;
+                }
+
+                #projects{
+                    margin-bottom: 25%;
+                }
+            }
+
+            @media (min-width:600px) and (max-width: 1000px){
+                #experience{
+                    margin-top: 5%;
+                    margin-left: 25%;
+                }
+            }
+
+            /* Modal Styles */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 100;
+                padding-top: 60px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.9);
+            }
+
+            .modal-content {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+            }
+
+            .modal-content, #caption {
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+
+            @keyframes zoom {
+                from {transform: scale(0)} 
+                to {transform: scale(1)}
+            }
+
+            .close {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .close:hover,
+            .close:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .col-lg-3{
+                margin-bottom: 5%;
+            }
         </style>
     </head>
     <body class=" horizontal  yellow">
@@ -521,7 +607,7 @@
                             <!---
                             <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
                             -->
-                            <a>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                            <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
                             <ul>
                                 <li>
                                     <a class="link" href='solution.html#Design & Strategy' id="ds-li">Design & Strategy</a>
@@ -612,7 +698,7 @@
                     <div>
                         <h1>alive</h1>
                         <br>
-                        <P style="color: black; font-size: 25px; font-weight: 500;">Turning your digital <span style="color: red;">aspirations</span> into a vivid <span style="color: red;">reality</span>!</P>
+                        <P class="quote" style="color: black; font-weight: 500;">Turning your digital <span style="color: red;">aspirations</span> into a vivid <span style="color: red;">reality</span>!</P>
                     </div>
                 </div>
             </div>
@@ -639,7 +725,7 @@
 </section>
 
 <!-- Section Start - Clients -->
-<section class='bg-primary clients padding-top-10 padding-bottom-40' style="background-color:#f5f5f5;">
+<section class='bg-primary clients padding-top-40 padding-bottom-40' style="background-color:#f5f5f5;">
     <div class="container1" style="padding-right: 50px; padding-left: 50px; padding-top: 100px; padding-bottom: 120px;">   
         <div class="slider">
         <div class="slide-track slider-animation">
@@ -727,7 +813,7 @@
                 <img src="./img/all_logos/Logos_Color/Logos-Color-2_0034_wealth-logo-svg-1024x473.png" height="82" alt="ain" />
             </div>
             <div class="slide1 delta">
-                <img src="./img/all_logos/Logos_Color/Logos-Color-2_0011_Delta.png" height="82" alt="vector" />
+                <img src="./img/all_logos/Logos_Color/DeltaPSU-Logo - color.png" height="82" alt="vector" />
             </div>
             <div class="slide1 hero_house">
                 <img src="./img/all_logos/Logos_Color/Logos-Color-2_0003_HERO-HOUSING-FINANCE.png" height="82" alt="inventure" />
@@ -745,7 +831,7 @@
                 <img src="./img/all_logos/Logos_Color/Logos-Color-2_0040_POLICYBAZAAR.png" height="82" alt="forklog" />
             </div>
             <div class="slide1 bajaj_cap">
-                <img src="./img/all_logos/Logos_Color/Logos-Color-2_0019_BAJAJ-CAPITAL.png" height="82" alt="ain" />
+                <img src="./img/all_logos/Logos_Color/bajaj-capital - Color.png" height="82" alt="ain" />
             </div>
             <div class="slide1 basf">
                 <img src="./img/all_logos/Logos_Color/Logos-Color-2_0018_BASF.png" height="82"  alt="vector" />
@@ -830,9 +916,6 @@
     </div>
 </section>
 <!-- Section End - Clients -->
-
-
-<!-- Section End - Why Choose Us -->
 <!-- Section Start - Services -->
 <section class='bg-primary services max-width-100  ' id='services'><div class="container">  <div class="row">
     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
@@ -842,17 +925,15 @@
         <p style="color: black;">With experts in our team from every field, we are ready to serve and save your everyday!</p>
         <a class="btn btn-primary text-on-primary" style="background-color: black; color: yellow;"  href="solution.html">Read More</a>
     </div>
-    <div class="col-lg-9 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 service-tablets" style="margin-top: -7%;">
+    <div class="col-lg-9 col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 service-tablets">
         <div class="tablet-black inviewport animated delay1" data-effect="fadeInRight"><img alt="tablet-black" src="img/tablet-black-blue.png" class="style-dependent img-responsive"></div>
         <div class="tablet-white inviewport animated delay2" data-effect="fadeInRight"><img alt="tablet-white" src="img/tablet-white-green.png" class="style-dependent img-responsive"></div>
     </div>
 </div>
 </div>
 </section>
-<!-- Section End - Services -->
 
-
-<section style="margin-top: 5%; margin-bottom: 5%;">
+<section class="solutions">
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -897,7 +978,7 @@
     </div>
 </section>
 
-
+<!-- Section End - Services -->
 <section class="parallax capabilities" id="capabilities">
     <div class="bg-overlay"></div>
     <div class="container">
@@ -909,7 +990,7 @@
                 <div class="container ts-promo-numbers">
                     <div class="row" style="color: white; font-size: 60px;">
     
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3" id="clients">
                             <div class="ts-promo-number text-center">
                                 <figure class="odometer" data-odometer-final="50" style=" margin-bottom: 10px;">0</figure>
                                 <span style="margin-left: -10px;">+</span>
@@ -919,7 +1000,7 @@
                         </div>
                         <!--end Promo number-->
     
-                        <div class="col-sm-6 col-md-6">
+                        <div class="col-sm-6 col-md-6" id="projects">
                             <div class="ts-promo-number text-center">
                                 <figure class="odometer" data-odometer-final="185000" style="margin-bottom: 10px;">0</figure>
                                 <span style=" margin-left: -10px;">+</span>
@@ -928,7 +1009,7 @@
                             </div>
                         </div>
     
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-sm-6 col-md-3" id="experience">
                             <div class="ts-promo-number text-center">
                                 <figure class="odometer" data-odometer-final="18" style="margin-bottom: 10px;">0</figure>
                                 <span style="margin-left: -10px;">+</span>
@@ -942,7 +1023,8 @@
                 </div>
             </section>
 <!-- Section Start - Portfolio -->
-<section  id='portfolio'><div class="container">
+<section  id='portfolio'>
+    <div class="container">
 <div class="row gallery-row">
     <h1 class="heading">Our Gallery</h1>
     <div class="headul"></div>
@@ -950,44 +1032,101 @@
     <!-- Portfolio Items - Start -->
     <div class="filter-items filter-mixitup  inviewport animated " data-effect="fadeIn" id="gallery-mixitup">
         <!-- Item - Start -->
-        <div class="filter-item development col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
-            <img alt="gallery-image" src="./img/Photos/Photo-02.jpg" class="img-responsive transition">
-            <div class="info transition">
-            </div>
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/Photo-02.jpg" class="img-responsive transition">
         </div>
         <!-- Item - End -->
         <!-- Item - Start -->
-        <div class="filter-item photography col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
-            <img alt="gallery-image" src="./img/Photos/Photo-03.jpg" class="img-responsive transition">
-            <div class="info transition">
-            </div>
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/Photo-03.jpg" class="img-responsive transition">
         </div>
         <!-- Item - End -->
         <!-- Item - Start -->
-        <div class="filter-item design col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
-            <img alt="gallery-image" src="./img/Photos/Photo-04.jpg" class="img-responsive transition">
-            <div class="info transition">
-            </div>
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/Photo-04.jpg" class="img-responsive transition">
         </div>
         <!-- Item - End -->
         <!-- Item - Start -->
-        <div class="filter-item branding col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
-            <img alt="gallery-image" src="./img/Photos/Photo-05.jpg" class="img-responsive transition">
-            <div class="info transition">
-            </div>
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/Photo-05.jpg" class="img-responsive transition">
         </div>
         <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/1.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/2.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/4.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/5.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/6.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/7.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/8.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/9.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+         <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/10.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+          <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/11.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+          <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/12.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+        <!-- Item - Start -->
+        <div class="col-lg-3 col-md-4 col-sm-6  col-xs-10 col-xs-offset-1 col-sm-offset-0">
+            <img alt="gallery-image" id="small" onclick="showModal(this)" src="./img/Photos/13.jpg" class="img-responsive transition">
+        </div>
+        <!-- Item - End -->
+
+
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="img01">
+        </div>
+
     </div>
     <!-- Portfolio Items - End -->
 </div>
-</div>
-</section>
+</div></section>
 <!-- Section End - Portfolio  -->
-
 <!-- Section Start - Blogs -->
 <section class='bg-lightgray  '><div class="container">
 <div class="row">
-<h1 class="heading" style="margin-top: -4%;">Latest Blogs</h1>
+<h1 class="heading">Latest Blogs</h1>
 <div class="headul"></div>
 <p class="subheading">Discover how our creative strategies and cutting-edge production services elevate brands to new heights through our thought provoking and insightful blogs.</p>
 <!-- Blog - Start -->
@@ -1052,7 +1191,7 @@
                 <span>M-Ideas</span>
             </div>
             <p>Turing your digital aspirations into vivid reality</p>
-            <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
+            <p>Email: contact@mideas.co.in <br> Phone: +91 99208 30144</p>
         </div>
         <!-- Text Widget - End -->
         <!-- Twitter Widget - Start -->
@@ -1083,13 +1222,13 @@
                 <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
                     <span>&copy; 2024 M-Ideas | Ideas Alive</span>
                 </div>
-                <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
-                    <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
-                    <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
-                </div> -->
+                <div class="col-lg-6 col-md-6" style="height: 10px; padding-top: 10px;" >
+                    <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-05.svg" alt="facebook"> </a>
+                    <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-06.svg" alt="instagram"> </a>
+                    <a href="https://www.linkedin.com/company/m-ideasideasalive/posts/?feedView=all"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-07.svg" alt="linkedin"> </a>
+                    <a href="https://www.youtube.com/@m-ideas1467"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-03.svg" alt="Youtube"> </a>
+                    <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-11.svg" alt="x"> </a>
+                </div>
             </div>
         </div>
     </div>
@@ -1164,27 +1303,38 @@
   -->
   
   <script>
-      const headerSlide1 = document.getElementById('audio-wheel');
-      const audio1 = document.getElementById('hover-audio2');
-  
-      // Play audio on hover
-      headerSlide1.addEventListener('mouseenter', () => {
-          audio1.currentTime = 0; // Reset audio to start
-          audio1.play().catch(error => {
-              console.log('Autoplay prevented:', error);
-          });
-      });
-  
-      // Optional: Pause audio on mouse leave
-      headerSlide1.addEventListener('mouseleave', () => {
-          audio1.pause();
-      });
-  
-      // Ensure audio is ready to play
-      window.addEventListener('load', () => {
-          audio1.load();
-      });
-      
-  </script>
+    const headerSlide1 = document.getElementById('audio-wheel');
+    const audio1 = document.getElementById('hover-audio2');
+
+    // Play audio on hover
+    headerSlide1.addEventListener('mouseenter', () => {
+        audio1.currentTime = 0; // Reset audio to start
+        audio1.play().catch(error => {
+            console.log('Autoplay prevented:', error);
+        });
+    });
+
+    // Optional: Pause audio on mouse leave
+    headerSlide1.addEventListener('mouseleave', () => {
+        audio1.pause();
+    });
+
+    // Ensure audio is ready to play
+    window.addEventListener('load', () => {
+        audio1.load();
+    });
+    
+    function showModal(img) {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+</script>
 </body>
 </html>

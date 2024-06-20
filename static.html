@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/jquery.viewportchecker.min.js"></script>
+    
     <!--Mixitup -->
     <script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
     <!--Fancybox -->
@@ -22,6 +23,9 @@
     <script type="text/javascript" src="js/main.js"></script>
 
     <style>
+        #ds-li:hover{
+                background-color: rgb(100, 100, 100);
+            }
         #category-buttons button {
             padding: 10px 20px;
             margin: 5px;
@@ -45,7 +49,7 @@
         .modal {
             display: none;
             position: fixed;
-            z-index: 1;
+            z-index: 60;
             padding-top: 60px;
             left: 0;
             top: 0;
@@ -89,6 +93,20 @@
             text-decoration: none;
             cursor: pointer;
         }
+
+        @media (min-width:300px) and (max-width: 500px){
+                section.header .maintext .primary-text h1{
+                    margin-left: 10%;
+                }
+
+                section.header .maintext .black-text h1{
+                    margin-left: -3%;
+                }
+        }
+        
+        .btn{
+            outline: 1px solid black;
+        }
     </style>
 </head>
 <body class="horizontal yellow">
@@ -100,76 +118,88 @@
                 <div class="primary inviewport animated delay4" data-effect="fadeInRightBig">
                     <div class='cssmenu'>
                         <!-- Menu - Start -->
-                        <ul class='menu-ul'>
-                            <li class='has-sub'>
-                                <a href='index.html'>Home</a>
-                            <li class='has-sub'>
-                                <a href='about-us.html'>About Us</a>
-                            </li>
-                            <li class='has-sub'>
-                                <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
-                                <ul>
-                                    <li>
-                                        <a href='audiovideo.html'>Audio & Video Content</a>
-                                    </li>
-                                    <li>
-                                        <a href='static.html'>Static Content</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <!-- Menu - End -->
-                    </div>
+                        <ul class='menu-ul'><li class='has-sub'>
+                            <a href='index.html'>Home</a>
+                        <li class='has-sub'>
+                            <a href='about-us.html'>About Us</a>
+                        </li>
+                        <li class='has-sub'>
+                            <!---
+                            <a href='audiovideo.html'>Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                            -->
+                            <a >Portfolio <i class='mdi mdi-chevron-down'></i></a>
+                            <ul>
+                                <li>
+                                    <a href='audiovideo.html' id="ds-li">Audio & Video Content</a>
+                                </li>
+                                <li>
+                                    <a href='static.html' id="ds-li">Static Content</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <!-- Menu - End -->
                 </div>
-                <div class="black inviewport animated delay4" data-effect="fadeInLeftBig">
-                    <div class='cssmenu'>
-                        <!-- Menu - Start -->
-                        <ul class='menu-ul'>
-                            <li class='has-sub'>
-                                <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
-                                <ul>
-                                    <li>
-                                        <a class="link" href='solution.html#Design & Strategy'>Design & Strategy</a>
-                                    </li>
-                                    <li>
-                                        <a class="link" href='solution.html#Content Production'>Content Production</a>
-                                    </li>
-                                    <li>
-                                        <a class="link" href='solution.html#Digital Marketing'>Digital Marketing</a>
-                                    </li>
-                                    <li>
-                                        <a class="link" href='solution.html#Media Design'>Media Design</a>
-                                    </li>
-                                </ul>
+            </div>
+            <div class="black inviewport animated delay4" data-effect="fadeInLeftBig">
+                <div class='cssmenu'>
+                    <!-- Menu - Start -->
+                    <ul class='menu-ul'>
+                    <li class='has-sub'>
+                        <!---
+                        <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                        -->
+                        <a href='solution.html'>Solutions <i class='mdi mdi-chevron-down'></i></a>
+                        <ul>
+                            <li>
+                                <a class="link" href='solution.html#Design & Strategy' id="ds-li">Design & Strategy</a>
                             </li>
-                            <li class='has-sub'>
-                                <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
-                                <ul>
-                                    <li>
-                                        <a href='blogs.html'>Blogs</a>
-                                    </li>
-                                    <li>
-                                        <a href='news.html'>News</a>
-                                    </li>
-                                    <li>
-                                        <a href='testimonials.html'>Testimonials</a>
-                                    </li>
-                                </ul>
+                            <li>
+                                <a class="link" href='solution.html#Content Production' id="ds-li">Content Production</a>
                             </li>
-                            <li class='has-sub'>
-                                <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
-                                <ul>
-                                    <li>
-                                        <a href='careers.html'>Careers</a>
-                                    </li>
-                                    <li>
-                                        <a href='getintouch.html'>Get in Touch</a>
-                                    </li>
-                                </ul>
-                            </li> 
+                            <li>
+                                <a class="link" href='solution.html#Digital Marketing' id="ds-li">Digital Marketing</a>
+                            </li>
+                            <li>
+                                <a class="link" href='solution.html#Media Design' id="ds-li">Media Design</a>
+                            </li>
                         </ul>
-                        <!-- Menu - End -->
-                    </div>
+                    </li>
+                    <li class='has-sub'>
+                        <!---
+                        <a href='blogs.html'>Media <i class='mdi mdi-chevron-down'></i></a>
+                        -->
+                        <a>Media <i class='mdi mdi-chevron-down'></i></a>
+                        <ul>
+                            <li>
+                                <a href='blogs.html' id="ds-li">Blogs</a>
+                            </li>
+                            <li>
+                                <a href='news.html'id="ds-li" >News</a>
+                            </li>
+                            <li>
+                                <a href='testimonials.html' id="ds-li">Testimonials</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class='has-sub'>
+                        <!---
+                            <a href='getintouch.html'>Contact <i class='mdi mdi-chevron-down'></i></a>
+                        -->
+                        <a>Contact <i class='mdi mdi-chevron-down'></i></a>
+                        <ul>
+                            <li>
+                                <a href='careers.html' id="ds-li">Careers</a>
+                            </li>
+                            <li>
+                                <a href='getintouch.html' id="ds-li">Get in Touch</a>
+                            </li>
+                        </ul>
+                    </li> 
+                </ul>
+                <!-- Menu - End -->
+            </div>
                 </div>
             </div>
         </div>
@@ -215,7 +245,7 @@
     <!-- Section Start - Material Design Icons -->
     <section>
         <div class="filter-categories filter-mixitup">
-            <button class="btn filter" onclick="showCategory('all')">All</button>
+            <button class="btn filter active" onclick="showCategory('all')">All</button>
             <button class="btn filter" onclick="showCategory('category1')">App Collaterals</button>
             <button class="btn filter" onclick="showCategory('category2')">Events</button>
             <button class="btn filter" onclick="showCategory('category3')">Communication Mailers</button>
@@ -253,7 +283,7 @@
                         <span>M-Ideas</span>
                     </div>
                     <p>Turing your digital aspirations into vivid reality</p>
-                    <p>Email: youremail@example.com <br> Phone: +1 234 5678 910</p>
+                    <p>Email: contact@mideas.co.in <br> Phone: +91 99208 30144</p>
                 </div>
                 <!-- Text Widget - End -->
                 <!-- Twitter Widget - Start -->
@@ -283,13 +313,13 @@
                         <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 message inviewport animated delay1" data-effect="fadeInUp">
                             <span>&copy; 2024 M-Ideas | Ideas Alive</span>
                         </div>
-                        <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12 social">
-                            <a href="#" class="inviewport animated delay1" data-effect="fadeInUp"><i class="mdi mdi-facebook text-on-primary"></i></a>
-                            <a href="#" class="inviewport animated delay2" data-effect="fadeInUp"><i class="mdi mdi-twitter text-on-primary"></i></a>
-                            <a href="#" class="inviewport animated delay3" data-effect="fadeInUp"><i class="mdi mdi-dribbble text-on-primary"></i></a>
-                            <a href="#" class="inviewport animated delay4" data-effect="fadeInUp"><i class="mdi mdi-google-plus text-on-primary"></i></a>
-                            <a href="#" class="inviewport animated delay5" data-effect="fadeInUp"><i class="mdi mdi-youtube-play text-on-primary"></i></a>
-                        </div> -->
+                        <div class="col-lg-6 col-md-6" style="height: 10px; padding-top: 10px;" >
+                            <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-05.svg" alt="facebook"> </a>
+                            <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-06.svg" alt="instagram"> </a>
+                            <a href="https://www.linkedin.com/company/m-ideasideasalive/posts/?feedView=all"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-07.svg" alt="linkedin"> </a>
+                            <a href="https://www.youtube.com/@m-ideas1467"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-03.svg" alt="Youtube"> </a>
+                            <a href="https://www.instagram.com/m.ideas_official/"> <img style="height: 15px; padding-left: 15px;" src="./img/Social Media Icons For web/Social icons-11.svg" alt="x"> </a>
+                        </div>
                     </div>
                 </div>
             </div>
